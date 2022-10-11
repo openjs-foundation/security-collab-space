@@ -26,8 +26,6 @@ Interested parties can also [join our #security channel](https://communityinvite
 - TBD
 
 ## Links & Resources
-
-## Links/Resources
 - [Strengthening security for OpenJS Foundation projects - Google Docs](https://docs.google.com/document/d/1TE_vTVm4SQwaI0V0PSL9U1RHk67LZBsISEnC-7NQ33Q/edit)
 - [Security Collab Space application](https://docs.google.com/document/d/1plT_JVSE21_IgK_yElXbffyCPkHMvlQkVGX-Y6OKqSQ/edit)
 - [Security at OpenJS - Google Slides](https://docs.google.com/presentation/d/1VCPlq1J-y8CTbPsljfOWB_nqAixrBeb6yO7vgDUzJrs/edit#slide=id.p2)
