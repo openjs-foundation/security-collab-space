@@ -16,11 +16,11 @@ The purpose of this repository is to provide a central place for coordination an
 Interested parties can also [join our #security channel](https://communityinviter.com/apps/js-foundation/join-openjs-foundation-on-slack) on Slack.
 
 ## Collaboration Space Members
-- Joe Sepi (@joesepi)
-- Jordan Harband (@ljharb
-- Matteo Collina (@mcollina)
-- Michael Dawson (@mhdawson)
-- Robin Ginn (@rginn)
+- Joe Sepi ([@joesepi](https://github.com/joesepi))
+- Jordan Harband ([@ljharb](https://github.com/ljharb))
+- Matteo Collina ([@mcollina](https://github.com/mcollina))
+- Michael Dawson ([@mhdawson](https://github.com/mhdawson))
+- Robin Ginn ([@rginn](https://github.com/rginn))
 
 ## In-Flight Intiatives
 - TBD
