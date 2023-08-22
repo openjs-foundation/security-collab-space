@@ -5,7 +5,7 @@
   </picture>
 </a>
 
-# Collaboration Space
+# Security Collaboration Space
 
 JavaScript touches nearly every part of the web today, and maintainers at OpenJS Foundation-hosted projects are working tirelessly to keep critical infrastructure secure. The Cross Project Council seeks to leverage its better together approach by sharing best practices, guidance, and support among OpenJS and other JS projects in the ecosystem.
 
