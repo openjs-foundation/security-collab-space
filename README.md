@@ -1,4 +1,11 @@
-# OpenJS Foundation Security Collaboration Space
+<a href="https://openjsf.org">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/openjs-foundation/artwork/main/openjs_foundation/openjs_foundation-logo-horizontal-color-dark_background.svg" />
+    <img src="https://raw.githubusercontent.com/openjs-foundation/artwork/main/openjs_foundation/openjs_foundation-logo-horizontal-color.svg" width="200" alt="OpenJS Foundation" />
+  </picture>
+</a>
+
+# Security Collaboration Space
 
 JavaScript touches nearly every part of the web today, and maintainers at OpenJS Foundation-hosted projects are working tirelessly to keep critical infrastructure secure. The Cross Project Council seeks to leverage its better together approach by sharing best practices, guidance, and support among OpenJS and other JS projects in the ecosystem.
 
