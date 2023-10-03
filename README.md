@@ -16,9 +16,13 @@ The purpose of this repository is to provide a central place for coordination an
 Interested parties can also [join our #security channel](https://communityinviter.com/apps/js-foundation/join-openjs-foundation-on-slack) on Slack.
 
 ## Collaboration Space Members
+
+- Ben Sternthal ([@bensternthal](https://github.com/bensternthal))
+- Chris de Almeida ([@ctcpip](https://github.com/ctcpip))
 - Darcy Clarke ([@darcyclarke](https://github.com/darcyclarke))
 - Joe Sepi ([@joesepi](https://github.com/joesepi))
 - Jordan Harband ([@ljharb](https://github.com/ljharb))
+- Matt Rutkowski ([@mrutkows](https://github.com/mrutkows))
 - Matteo Collina ([@mcollina](https://github.com/mcollina))
 - Michael Dawson ([@mhdawson](https://github.com/mhdawson))
 - Robin Ginn ([@rginn](https://github.com/rginn))
