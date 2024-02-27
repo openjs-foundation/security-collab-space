@@ -33,6 +33,7 @@ Interested parties can also [join our #security channel](https://communityinvite
 - Matteo Collina ([@mcollina](https://github.com/mcollina))
 - Michael Dawson ([@mhdawson](https://github.com/mhdawson))
 - Robin Ginn ([@rginn](https://github.com/rginn))
+- Ulises Gascón ([@UlisesGascon](https://github.com/UlisesGascon))
 
 ## In-Flight Intiatives
 - TBD
