@@ -1,4 +1,4 @@
-# OpenJS Foundation Projects and the OpenSSF CII Best Practices Badge
+# OpenJS Foundation Projects and the OpenSSF Best Practices Badge
 
 This document is written for two primary audiences: OpenJS Foundation staff/volunteers/stakeholders, and end users of Foundation software projects.
 
