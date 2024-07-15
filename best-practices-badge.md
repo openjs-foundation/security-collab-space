@@ -1,10 +1,10 @@
-# OpenSSF CII Best Practices Badge Guide
+# OpenSSF Best Practices Badge Guide
 
 ## Summary
 
-Ensuring the security, sustainability, and maintainability of software projects is critically important. Following industry-standard best practices is a great start to doing that, and the [OpenSSF CII Best Practices badge system][bp] is a reliable way to concretely audit and measure how well the project is doing.
+Ensuring the security, sustainability, and maintainability of software projects is critically important. Following industry-standard best practices is a great start to doing that, and the [OpenSSF Best Practices badge system][bp] is a reliable way to concretely audit and measure how well the project is doing.
 
-Here‘s how you can most efficiently secure your project and earn the OpenSSF CII Best Practices badge for your JS project - at a “Passing” level, at a minimum, and “Silver”, ideally. “Gold” is nice, but not practically achievable for most open source projects unless they are lucky or large enough to have multiple maintainers, or a corporation has intensely invested in them. To read more about the tiers, their rationale, and their goals, see [Criteria Discussion][bp-criteria].
+Here‘s how you can most efficiently secure your project and earn the OpenSSF Best Practices badge for your JS project - at a “Passing” level, at a minimum, and “Silver”, ideally. “Gold” is nice, but not practically achievable for most open source projects unless they are lucky or large enough to have multiple maintainers, or a corporation has intensely invested in them. To read more about the tiers, their rationale, and their goals, see [Criteria Discussion][bp-criteria].
 
 ## Who is this guide for?
 
@@ -179,7 +179,7 @@ That should cover the “passing” tier, and you should be at 100%.
 
 Make a PR. or push a commit, that adds the following markdown to the top of your readme:
 ```md
-[![CII Best Practices](https://www.bestpractices.dev/projects/$ID/badge)](https://www.bestpractices.dev/projects/$ID)
+[![Best Practices Badge](https://www.bestpractices.dev/projects/$ID/badge)](https://www.bestpractices.dev/projects/$ID)
 ```
 
 where `$ID` is the ID of your project - you can find it in the URL on the best practices site.
