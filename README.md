@@ -30,14 +30,10 @@ Interested parties can also [join our #security channel](https://communityinvite
 - Joe Sepi ([@joesepi](https://github.com/joesepi))
 - Jordan Harband ([@ljharb](https://github.com/ljharb))
 - Matt Rutkowski ([@mrutkows](https://github.com/mrutkows))
-- Matteo Collina ([@mcollina](https://github.com/mcollina))
 - Michael Dawson ([@mhdawson](https://github.com/mhdawson))
 - Robin Ginn ([@rginn](https://github.com/rginn))
 - Steve Husak ([@shusak](https://github.com/shusak))
 - Ulises Gascón ([@UlisesGascon](https://github.com/UlisesGascon))
-
-## In-Flight Intiatives
-- TBD
 
 ## Links & Resources
 - [Strengthening security for OpenJS Foundation projects - Google Docs](https://docs.google.com/document/d/1TE_vTVm4SQwaI0V0PSL9U1RHk67LZBsISEnC-7NQ33Q/edit)
