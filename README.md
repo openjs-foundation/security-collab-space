@@ -32,6 +32,7 @@ Interested parties can also [join our #security channel](https://communityinvite
 - Matt Rutkowski ([@mrutkows](https://github.com/mrutkows))
 - Michael Dawson ([@mhdawson](https://github.com/mhdawson))
 - Robin Ginn ([@rginn](https://github.com/rginn))
+- Rick Markins ([@rxmarbles](https://github.com/rxmarbles))
 - Steve Husak ([@shusak](https://github.com/shusak))
 - Ulises Gascón ([@UlisesGascon](https://github.com/UlisesGascon))
 
