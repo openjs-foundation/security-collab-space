@@ -20,7 +20,7 @@ Desired outcomes include:
 
 The purpose of this repository is to provide a central place for coordination and documentation around security best practices and resources for the JavaScript community and beyond.
 
-Interested parties can also [join our #security channel](https://communityinviter.com/apps/js-foundation/join-openjs-foundation-on-slack) on Slack.
+Interested parties can also [join our #security channel](https://slack-invite.openjsf.org/) on Slack.
 
 ## Collaboration Space Members
 
