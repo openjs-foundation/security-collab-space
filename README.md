@@ -31,6 +31,7 @@ Interested parties can also [join our #security channel](https://slack-invite.op
 - Jordan Harband ([@ljharb](https://github.com/ljharb))
 - Matt Rutkowski ([@mrutkows](https://github.com/mrutkows))
 - Michael Dawson ([@mhdawson](https://github.com/mhdawson))
+- Rick Markins ([@rxmarbles](https://github.com/rxmarbles))
 - Robin Ginn ([@rginn](https://github.com/rginn))
 - Steve Husak ([@shusak](https://github.com/shusak))
 - Ulises Gascón ([@UlisesGascon](https://github.com/UlisesGascon))
