@@ -33,6 +33,7 @@ Interested parties can also [join our #security channel](https://slack-invite.op
 - Michael Dawson ([@mhdawson](https://github.com/mhdawson))
 - Rick Markins ([@rxmarbles](https://github.com/rxmarbles))
 - Robin Ginn ([@rginn](https://github.com/rginn))
+- Sebastian Beltran ([@bjohansebas](https://github.com/bjohansebas))
 - Steve Husak ([@shusak](https://github.com/shusak))
 - Ulises Gascón ([@UlisesGascon](https://github.com/UlisesGascon))
 
