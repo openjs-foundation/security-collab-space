@@ -20,6 +20,8 @@ Desired outcomes include:
 
 The purpose of this repository is to provide a central place for coordination and documentation around security best practices and resources for the JavaScript community and beyond.
 
+If you’re interested in JavaScript and web security, join us bi-weekly on Mondays. Check out the schedule on the OpenJS public calendar:  [calendar.openjsf.org](https://calendar.google.com/calendar/u/0/embed?src=linuxfoundation.org_fuop4ufv766f9avc517ujs4i0g@group.calendar.google.com&pli=1).
+
 Interested parties can also [join our #security channel](https://slack-invite.openjsf.org/) on Slack.
 
 ## Collaboration Space Members
