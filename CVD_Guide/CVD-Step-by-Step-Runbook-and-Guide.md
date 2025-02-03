@@ -1,217 +1,123 @@
-# OpenJS Project Recommended Coordinated Vulnerability Disclosure (CVD) Runbook Guide and Templates for Medium and Large Teams
+# Coordinated Vulnerability Disclosure (CVD) Step-by-Step Runbook Guide for Teams
 
 # Purpose and Scope
 
-### When to use this Runbook
+### When to use this Guide
 
-This runbook template is a step-by-step guide for use by OpenJS Projects with medium and large maintainer teams when responding to properly and improperly disclosed security vulnerabilities that may be directly or indirectly related to their Project(s).
-
-This runbook is designed to support OpenJS Projects in mundane and intense CVD scenarios. It assumes limited exposure or experience working with a mature Bug Bounty Team, Product Security Incident Response Team (PSIRT), or Security Advisory Team.
-
-A modified version of this runbook tailored to Projects with solo maintainers and small teams is also available and can be found [here].
+This step-by-step runbook guide is designed for those with limited exposure and experience working with coordinated vulnerability disclosure. The approach taken with this guide can be quite heavy and is designed for Projects with medium and large maintainer teams responding to external security vulnerability disclosures.
 
 ### When this Runbook Should Not be Used
 
-Please be mindful that this runbook IS NOT an incident response plan and that the word incident is found only in the Purpose and Scope section of this document. That said, this runbook does contain guidance on handling scenarios many may call incidents, but avoids using the term as it has become increasingly regulated and legally nuanced.
-
-This runbook uses the term SEV to describe extreme vulnerability mitigation and remediation scenarios like the one above in order to differentiate them from incidents, which per the [U.S. Federal Incident Notification Guidelines](https://www.cisa.gov/federal-incident-notification-guidelines), would be occurrences when the vulnerability is exploited and potentially compromises the confidentiality, integrity, and availability of a system.
-
-Thus, unlike an Incident Response Plan, this runbook does not provide guidance on how to handle scenarios when there is concern or evidence of compromise of an OpenJS Project’s infrastructure, tools, source code, communications, or devices (eg: maintainer workstations).
+Please be mindful that this runbook IS NOT an incident response plan. Unlike an Incident Response Plan, this runbook does not provide guidance on how to handle scenarios when there is concern or evidence of compromise of an Project’s infrastructure, tools, source code, communications, or maintainer devices.
 
 # How to use this Runbook
 
-
-## Researcher Communications Primer
-
-Proactively working to make a good impression in all communications with Reporters/Security Researchers is the key to your success. Each message is an opportunity to establish your Project's reputation in the security community and to potentially  gain a recurring reporter that helps improve the security posture of your Project.
-
-But be mindful of the negotiation-like dynamics that can occur between Bug Bounty and CVD Program operators and the security research community, particularly with high impact vulnerabilities.
-
-#### Communicate with Empathy
-
-Hostile and unprofessional behaviors by Program operators are far less common and egregious than they once were. However, disrepectful treatment continues to be a common experience for ethical security researchers working in good faith when disclosing security vulnerabilities.
-
-Be mindful of these experiences and what others may - in good or bad faith - interpret as dismissiveness or a lack of urgency whenever making decisions and communicating those decisions with a security researcher.
-
-#### Communicate with Situational Awareness
-
-At the same time, Bug Bounty and CVD Program operators unfortunately continue to struggle with erroneous and irrelevant disclosures from hostile and publicity seeking individuals demanding recognition for their research. 
-
-The best defense against these actors is to explain your decisions clearly and include supporting facts in all communications and professionally requesting the same from them. If there is ever disagreement on the validity, severity/impact, or exploitability of a security vulnerability, leave nothing to assumption and explicitly state (and continue to re-state if mentioned in a previous comm) the data underlying your rationale.
-
-### Understanding Researcher Assertions on Severity and Impact
-
-researcher assertions on Impact and Scope often need to be adjusted for reasons beyond their control:
-
-#### Researchers Don't Live Your Software Like You Do
-Although there are exceptions, one should expect that researchers who submit security vulnerabilities to Bug Bounty and CVD Programs are not as knowledgable on the software they're testing as the software engineers who wrote it.
-
-#### Bug Hunting is a Different Skill Set
-The technical skills needed to be a successful bug hunter/pen tester do not fully overlap with those of software engineers building open source and enterprise software.
-
-While it's more common for Reporters to over-state the impact of their vulnerability for the sake of higher bounties and self-promotion, it's also not uncommon for researchers to unknowingly understate and miss the true scope and impact of their vulnerability.
-
 ## Take it Step by Step
 
-This Runbook is written as a step-by-step checklist with guidance to support you along the way.
+Recommendation: Folow the steps in order. Steps are written with the assumption of knowledge being available after the completion of previous steps. Steps that can or should happen in parallel to each other are identified and also have supporting guidance.
 
-It is recommended that steps be taken in order as certain steps are written with the assumption of knowledge being available after the completion of previous steps. Steps that can or should happen in parallel to each other are identified and also have supporting guidance
+## Associated Resources
 
-# How to use this Checklist Template
+This guide is meant to be used in conjunction with:
 
-This checklist lists all of the steps found in the below Runbook and is designed with GitHub's Tasklist feature for when used as a template for a GitHub issue. You can use this template to provide visibility into which Step the Report is currently in and stay aware of the upcoming Steps.
-
->[!TIP]
->In several Steps (eg: 2, 5, 11), you'll only use one of the available sub-Steps. Be sure to remove the other sub-steps to shorten the length of the checklist and only see which steps were followed!
-
-## Phase 0: Report Submission
-
-- [ ] **1. The Reporter submits a potential security concern or vulnerability**
-    - [ ] 1a. Optional: Reporter creates a temporary private fork (if they want to)
-
-## Phase 1: Tier 1 Triage
-
-- [ ] **2. On Call Performs Tier 1 Triage and Drafts an Initial Acknowledgement**
-    - [ ] 2a. Security Escalation Criteria
-    - [ ] 2b. Need More Information?
-    - [ ] 2c. Not a security vulnerability Report?
-    - [ ] 2d. Abuse Escalation Criteria
-    - [ ] 2e. Routine security vulnerability Report
-- [ ] **3. On Call Begins Organizing Internal Discussion by Creating a Tracking Discussion for the Vulnerability**
-- [ ] **4. On Call Drafts a Tier 1 Summary**
-- [ ] **5. On Call Sends the Reporter an Initial Acknowledgement of Receipt**
-    - [ ] 5a. If the Report meets Security Escalation Criteria
-    - [ ] 5b. If the Report Appears to be Missing Basic Information
-    - [ ] 5c. If the Report Appears to be a Valid and Routine
-    - [ ] 5d. If the Report is not a Security Vulnerability
-
-## Phase 2: Tier 2 Triage
-
-- [ ] **6. Assign Tier 2 Triage Roles**
-- [ ] **7. Triage Analyst Attempts to Reproduce the Vulnerability as Reported**
-- [ ] **8. Coordinator Notifies Reporter of Reproduction Progress**
-    - [ ] 8a. First Notification: Unable to Reproduce / NMI
-    - [ ] 8b. Second/Ongoing Comms: Still Unable to Reproduce
-    - [ ] 8c. Notification: Successful Reproduction
-- [ ] **9. Triage Analyst Performs Tier 2 Triage**
-    - [ ] 9a. Identify and Document True Root Cause(s)
-    - [ ] 9b. Assess and Document Impact and Exploitability
-    - [ ] 9c. Document Initial Mitigation/Remediation Options
-- [ ] **10. Coordinator Facilitates Consensus Building Discussions**
-    - [ ] 10a. Reach Technical Consensus on Tier 2 Triage
-    - [ ] 10b. Agree to Completely Remediate the Vulnerability 
-    - [ ] 10c. Assign Remediation Roles and Agree on Mitigation/Remediation Next Steps
-- [ ] **11. Coordinator Notifies the Reporter of Tier 2 Triage Decision**
-    - [ ] 11a. If the Vulnerability Meets the Security Escalation Criteria
-    - [ ] 11b. If the Vulnerability is Routine
-
-## Phase 3: Fix Development
-
-- [ ] **12. Remediation Developer(s) Gather Information and Validate Tier 2 Triage**
-    - [ ] 12a. (OPTIONAL) Gather Additional Information
-    - [ ] 12b. Validate Tier 2 Triage Consensus
-    - [ ] **13. Remediation Developer(s) Draft Mitigation/Remediation Plans**
-    - [ ] **14. Coordinator Facilitates Feedback and Consensus on Draft Mitigation/Remediation Plans**
-    - [ ] **15. Remediation Developer(s) Tentatively Complete and Verify Remediation with Support from Reviewer(s) and Verifiers(s)**
-
-## Phase 4: Release
-
-- [ ] **16. Coordinator Prepares the Security Advisory for Publication**
-    - [ ] 16a. Preparing the Security Advisory
-    - [ ] 16b. Request a CVE ID from GitHub's CNA
-- [ ] **17. Coordinator Updates Reporter to Validate Remediation and Coordinate Public Disclosure**
-    - [ ] 17a. Request Feedback on the Security Advisory
-    - [ ] 17b. Request Reporter Verification of Implementation Efficacy and Completeness
-    - [ ] 17c. Ask to Review or Provide a Statement for their Blog
-- [ ] **18. Remediation Developer(s) Release the Patch While Coordinator Publishes Security Adviso**ry
+* [TEMPLATE Step-by-Step CVD Guide Checklist](https://../TEMPLATE-CVD-Step-by-Step-Runbook-Checklist.md)
+* [Researcher Communications Templates](https://../Researcher-Communications.Primer.md)
 
 # Roles and Responsibilities
 
-Besides the On Call Role, this Runbook uses the roles defined the GitHub Private Vulnerability Reporting (PVR) [documentation](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/creating-a-repository-security-advisory#about-credits-for-repository-security-advisories). These tables are also included in the relevent Steps they're first introduced for easy reference.
+Besides the On Call Role, this runbook uses the roles defined the GitHub Private Vulnerability Reporting (PVR) [documentation](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/creating-a-repository-security-advisory#about-credits-for-repository-security-advisories).
+
+* Finder
+* Reporter
+* On Call
+* Triage Analyst
+* Coordinator
+* Remediation Developer
+* Remediation Reviewer
+* Remediation Verifier
 
 ## Introduced in Phase 0: Report Submission
 
-| Responsibilities: Finder | 
-| -------- | 
-| Identifies the security vulnerability      |
+### Responsibilities: Finder
 
-| Responsibilities: Reporter | 
-| -------- | 
-| Submits the vulnerability Report       |
-| Adds othe Finder(s) who discovered the security vulnerability as Collaborators       | 
-| Responds to questions and coordination requests from the Project       | 
-| Validates the remediation patch        | 
+* Identifies the security vulnerability
+
+### Responsibilities: Reporter
+
+* Submits the vulnerability Report
+* Adds othe Finder(s) who discovered the security vulnerability as Collaborators
+* Responds to questions and coordination requests from the Project
+* Validates the remediation patch
 
 >[!NOTE]
->In most cases the Reporter likely to also be the Finder. The role of Reporter is used throughout this Runbook to simplify phrasing.
+>In most cases the Reporter likely to also be the Finder. The role of Reporter is used throughout this runbook.
 
 ## Introduced in Phase 1: Tier 1 Triage
 
-| Responsibilities: On Call (credited as Triage Analyst) | 
-| -------- | 
-| Determine if the Report is a potential Security Vulnerability      |
-| Determine if the Report Needs More Information (NMI) to Triage and Reproduce       | 
-| Send the appropriate initial acknowledgement to the Reporter      | 
-| Summarize the vulnerability and next steps for others on the team      |
+### Responsibilities: On Call (credited in GH as Triage Analyst)
+* Determine if the Report is a potential Security Vulnerability
+* Determine if the Report Needs More Information (NMI) to Triage and Reproduce
+* Send the appropriate initial acknowledgement to the Reporter
+* Summarize the vulnerability and next steps for others on the team
 
-| Responsibilities: Coordinator | 
-| -------- | 
-| Assist Triage Analyst w Documentation     |
-| Gather Feedback, Edit and Send NMI Response     |
-| Fasciliate Discussions with Team     | 
-| Organize and Track Fix Action Items     |
-| Informs Reporter of Tier 2 Triage Decision
-| Send Reporter Regular Updates (as Appropriate) |
-| Drafts and Gathers Feedback on Public Security Advisory      | 
-| Propose Updated CVSSv3     | 
-| Propose Updated CWE     |
+### Responsibilities: Coordinator
+
+* Assist Triage Analyst w Documentation
+* Gather Feedback, Edit and Send NMI Response
+* Fasciliate Discussions with Team
+* Organize and Track Fix Action Items
+* Informs Reporter of Tier 2 Triage Decision
+* Send Reporter Regular Updates (as appropriate)
+* Drafts and Gathers Feedback on Public Security Advisory
+* Propose Updated CVSS v3.1
+* Propose Updated CWE
 
 >[!NOTE]
->For many Projects, it's quite likely that the On Call and Coordinator roles will be performed by the same individual during Tier 1 Triage. In some Projects, the Coordinator role may transition to another person dedicated person during the Tier 2 Triage or Fix Phases.
+>It's possible that the Triage Analyst and Coordinator roles will be performed by the same individual during Tier 1 Triage. In some Projects, the Coordinator role may transition to another person dedicated person during the Tier 2 Triage or Fix Phases.
 
 ## Introduced in Phase 2: Tier 2 Triage
 
-| Responsibilities: Triage Analyst | 
-| -------- | 
-| Reproduce the Vulnerability     |
-| (If NMI to Repro) Document Challenges and Steps Taken      | 
-| Assess and Document Impact     | 
-| Validate and/or Document Erroneous Reporter Assertions      |
-| Assess and Document True Root Cause(s)     | 
-| Propose Fix Options (Mitigation and/or Remediation)     |
-| Identify Fix Resourcing and Time Requirements      | 
+### Responsibilities: Triage Analyst
 
-| Responsibilities: Remediation Developer | 
-| -------- | 
-| Reproduce the Vulnerability for Themselves     |
-| Perform Additional Root Cause Analysis (as needed)      | 
-| Draft the Technical Portion of the Short-Term Mitigation Plan (as needed)     | 
-| Draft the Technical Mitigation/Remediation Plan(s)         |
-| Author Code Changes per the Plan(s)     |
-| Test Repro Steps the Against Patch to Verify Fix Efficacy     |
-| Author Documentation Changes (as needed)      | 
+* Reproduce the Vulnerability
+* (if NMI to repro) Document Reproduction Challenges and Steps Taken
+* Assess and Document Impact
+* Validate and/or Document Erroneous Reporter Assertions
+* Assess and Document True Root Cause(s)
+* Propose Fix Options (Mitigation and/or Remediation)
+* Identify Fix Resourcing and Time Requirements 
 
-| Responsibilities: Remediation Reviewer | 
-| -------- | 
-| Reproduce the Vulnerability for Themselves     |
-| Review and Provide Inputs to Mitigation/Remediation Plans     |
-| Review Mitigation/Remediation Pull Requests     |
+### Responsibilities: Remediation Developer
 
-| Responsibilities: Remediation Verifier | 
-| -------- | 
-| Reproduce the Vulnerability for Themselves     |
-| Review and Provide Input to Mitigation/Remediation Plans     |
-| Perform Testing to Verify Remediation Efficacy     |
+* Reproduce the Vulnerability for Themselves
+* Perform Additional Root Cause Analysis (as needed)
+* Draft the Technical Portion of the Short-Term Mitigation Plan (as needed)
+* Draft the Technical Mitigation/Remediation Plan(s)
+* Author Code Changes per the Plan(s)
+* Test Repro Steps the Against Patch to Verify Fix Efficacy
+* Author Documentation Changes (as needed)
+
+### Responsibilities: Remediation Reviewer
+
+* Reproduce the Vulnerability for Themselves
+* Review and Provide Inputs to Mitigation/Remediation Plans
+* Review Mitigation/Remediation Pull Requests
+
+### Responsibilities: Remediation Reviewer
+
+* Reproduce the Vulnerability for Themselves
+* Review and Provide Input to Mitigation/Remediation Plans
+* Perform Testing to Verify Remediation Efficacy
 
 # Start of Runbook
 
 # 1. The Reporter submits a potential security concern or vulnerability
 
-A Reporter can use [this workflow](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability#privately-reporting-a-security-vulnerability) to create a new Security Advisory. This is the first step of the Coordinated Vulnerability Disclosure process!
+A Reporter can use [this workflow in GitHub](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability#privately-reporting-a-security-vulnerability) to create a new Security Advisory. This is the first step of the Coordinated Vulnerability Disclosure process!
 
 Once they click ***Submit Report*** on the Report a Vulnerability page, three things happen:
 
-1. A new Security Advisory is created in the repository they chose.
+1. A new Security Advisory is created in the repository they reported in.
 2. Members of the Repository's Owners group are notified.
 3. The Reporter will receive a confirmation email.
 
@@ -228,12 +134,6 @@ This feature cannot be disabled. [Click here](https://docs.github.com/en/code-se
 ![Screenshot](https://docs.github.com/assets/cb-51900/mw-1440/images/help/security/advisory-start-a-temporary-private-fork-button.webp)
 
 # 2. [T1] On Call Performs Tier 1 Triage and Drafts an Initial Acknowledgement
-
->#### Initial Response SLA: 48 Hours
-
-| Advisory State | Comms State | Vulnerability  |
-| -------------- | ------------| -------------  | 
-| Triage         | Initial Ack In Progress | Not Reproduced | 
 
 In this Step, it is the On Call's responsibility to to determine which of the following criteria are relevant to the Report in order to determine the best way to proceed with an Initial Acknowledgement.
 
@@ -305,12 +205,6 @@ Our initial acknowledgement should demonstrate that the Report was at least read
 
 # 3. [T1] On Call Begins Organizing Internal Discussion by Creating a Tracking Discussion for the Vulnerability
 
->#### Initial Response SLA: 48 Hours
-
-| Advisory State | Comms State | Vulnerability  |
-| -------------- | ------------| -------------  | 
-| Triage         | Initial Ack In Progress | Not Reproduced | 
-
 If the Report appears to contain a valid security vulnerability or meets an escalation criteria, the On Call begins documenting the Report and their Tier 1 Triage by creating a new GitHub Discussion in the [Private SecurityWG Repo].
 
 1. The body of the discussion should be a copy/paste of the initial vulnerability Report.
@@ -321,12 +215,6 @@ If the Report appears to contain a valid security vulnerability or meets an esca
 > The Tier 1 Summary and proposed Initial Acknowledgement are added as comments to leverage GitHub Discussion threading functionality. 
 
 # 4. [T1] On Call Drafts a Tier 1 Summary
-
->#### Initial Response SLA: 48 Hours
-
-| Advisory State | Comms State | Vulnerability  |
-| -------------- | ------------| -------------  | 
-| Triage         | Inital Ack In Progress | Not Reproduced | 
 
 ### Kicking Off Internal Comms with a Tier 1 Summary 
 
@@ -349,11 +237,7 @@ This Step comes before sending the Initial Acknowledgement to the Reporter so th
 
 # 5. [T1] On Call Sends the Reporter an Initial Acknowledgement of Receipt
 
->#### Initial Response SLA: 48 Hours
 
-| Advisory State   | Comms State           | Vulnerability  |
-| ---------------- | ----------------------| -------------  | 
-| Triage or Closed | Initial Ack Sent | Not Reproduced | 
 
 This Initial Acknowledgement is probably the first time you have ever communicated with this Reporter/Security Researcher. The first few days after submitting a vulnerability report to a Bug Bounty or CVD Program are the most uncertain for a security researcher, especially if this is the first time they've submitted a vulnerability to your Program.
 
@@ -388,12 +272,6 @@ The most important thing your Initial Acknowledgement should do is:
 > The Tier 1 Triage Phase is now complete and you transition to the Tier 2 Triage Phase! Congrats! \ o /
 
 # 6. [T2] Assign Tier 2 Triage Roles
-
->#### Tier 2 Triage Decision Response SLA: 7 Days
-
-| Advisory State   | Comms State           | Vulnerability  |
-| ---------------- | ----------------------| -------------  | 
-| Triage  | Initial Ack Sent | Not Reproduced | 
 
 Depending on the size of the [SecurityWG], a sizable number of individuals can effectively participate in order to distribute the load of effectively handling CVD.
 
@@ -431,12 +309,6 @@ During the Tier 2 Triage Phase, the two minimum Roles to assign are:
 
 # 7. [T2] Triage Analyst Attempts to Reproduce the Vulnerability as Reported 
 
->#### Tier 2 Triage Decision Response SLA: 7 Days
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Triage | Initial Ack Sent  | Reproduction In Progress | 
-
 During this Step, the Triage Analyst's primary responsibility is to reproduce the vulnerability as described in the Report. The information gathered by this work will be the basis for future decision making.
 
 ### Document More Detailed Reproduction Steps
@@ -445,7 +317,7 @@ While attempting reproduction, it is common to find omissions and errors in the 
 
 #### Success: Two Person Verification
 
-This Runbook recommends that once the vulnerability is successfully reproduced by the Triage Analyst, a second team member should validate this using the updated Repro Steps.
+This runbook recommends that once the vulnerability is successfully reproduced by the Triage Analyst, a second team member should validate this using the updated Repro Steps.
 
 > [!IMPORTANT]
 > The Reporter should be notified using the [guidance in Step 8b] as soon as the vulnerability in their Report is repeatedly reproducable. The additional root cause and impact analysis work described below in [Step 9] **should not block** this notification.
@@ -458,18 +330,12 @@ Despite the inability to reproduce and validate the vulnerability, at this Step 
 
 #### NMI: Two Person Verification
 
-This Runbook recommends that if the Triage Analyst is unable to reproduce the vulnerability, another member of the team should make an independent attempt in order to control for environmental factors and natural human error. Te Reporter be notified of this only once two team members have independently failed to reproduce the vulnerability.
+This runbook recommends that if the Triage Analyst is unable to reproduce the vulnerability, another member of the team should make an independent attempt in order to control for environmental factors and natural human error. Te Reporter be notified of this only once two team members have independently failed to reproduce the vulnerability.
 
 > [!TIP]
 > Guidance on how to optimize for comms success when requesting more information from the Reporter is discussed in [Step 8a].
 
 # 8. [T2] Coordinator Notifies Reporter of Reproduction Progress
-
->#### Tier 2 Triage Decision Response SLA: 7 Days
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Triage | Repro Success or NMI In Progress  | Reproduced or NMI | 
 
 This notification is probably the first in-depth communication you've ever had with this Reporter. Be sure to check out the [Researcher Comms Primer] to help set you up for success! 
 
@@ -499,18 +365,12 @@ As soon as at least two members of the team have been able to independently repr
 
 # 9. [T2] Triage Analyst Determines the True Root Cause(s), Impact, and Severity 
 
->#### Fix Decision Response SLA: 14 Days
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Triage | Repro Notification Sent  |  Reproduced | 
-
 ## 9a. Identify and Document True Root Cause(s)
 
 Determining the true root cause(s) allows the Triage Analyst and the team to gain a more thorough understanding of the real vulnerability underlying the Report's behavior.
 
 > [!TIP]
-> This Runbook recommends that vulnerabilities that have been successfully reproduced should not be considered validated until the true root cause(s) are known. The reason for this is that the behavior demonstrated in the Reporter's Reproduction Steps may only represent one of many ways to exploit the vulnerability.
+> This runbook recommends that vulnerabilities that have been successfully reproduced should not be considered validated until the true root cause(s) are known. The reason for this is that the behavior demonstrated in the Reporter's Reproduction Steps may only represent one of many ways to exploit the vulnerability.
 
 The true root cause(s) should be documented in simple, short language that does not require extensive context of the product to understand. More complex writing happens when capturing the Impact of the vulnerabilities caused by the root cause(s) and proposing potential mitigations or remediations that address the true root cause(s).
 
@@ -544,7 +404,7 @@ In addition to the detailed description of the vulnerability and its root cause(
 - First draft of the proposed CWE
 
 > [!NOTE]
-> It's likely that this description will evolve over time. There are reminders to keep this updated throughout this Runbook to help the [SecurityWG] stay aligned on their understanding of the vulnerability.
+> It's likely that this description will evolve over time. There are reminders to keep this updated throughout this runbook to help the [SecurityWG] stay aligned on their understanding of the vulnerability.
 
 ## 9c. Document Initial Mitigation/Remediation Options
 
@@ -558,12 +418,6 @@ For each root cause, the Triage Analyst should *briefly* document initial propos
 > This brief, initial proposal by the Triage Analyst and Coordinator is not meant to be the final fix plan as the Triage Analyst may not be the same person who should design and author the remediating code changes. This deliverable is intended to provide a foundation for team-wide collaboration and consensus building only.
 
 # 10. [T2] Coordinator Facilitates Consensus Building Discussions
-
->#### Fix Decision Response SLA: 14 Days
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Triage | Repro Notification Sent  | Root Cause Proposed | 
 
 Once data gathering and analysis for Tier 2 Triage is complete, the final step for Tier 2 Triage is for the [SecurityWG] to reach a consensus on:
 
@@ -600,7 +454,7 @@ In a perfect world all known security vulnerabilities would be completely remedi
 
 However, in practice there are scenarios where it may not be appropriate or possible to immediately prioritize a code change that completely remediates the reported behavior.
 
-This Runbook assumes that the [SecurityWG] will choose to completely remediate the vulnerability whenever possible, even if this choice requires negotiating a longer disclosure timeline with the Reporter due to the effort required for remediation.
+This runbook assumes that the [SecurityWG] will choose to completely remediate the vulnerability whenever possible, even if this choice requires negotiating a longer disclosure timeline with the Reporter due to the effort required for remediation.
 
 #### Common Won't Fix Scenarios
 
@@ -612,7 +466,7 @@ This Runbook assumes that the [SecurityWG] will choose to completely remediate t
 - Exploitation is only possible when the target is using antiquated EoL software that should no longer be used due to the absence of modern security protections.
 
 > [!NOTE]
-> This Runbook makes a binary assumption that a CVD Report is either a security vulnerability or is not a security vulnerability.
+> This runbook makes a binary assumption that a CVD Report is either a security vulnerability or is not a security vulnerability.
 > 
 > However, not all valid Reports from security researchers and pen testers are actually security vulnerabilities. They may actually be describing the absence of a security feature or functionality that has a security-positive impact for which the target is expected to have compensating controls.
 
@@ -696,19 +550,13 @@ The [SecurityWG] should only consider disclosing an unpatched vulnerability if t
 
 # 11. [T2] Coordinator Notifies the Reporter of Tier 2 Triage Decision
 
->#### Fix Decision Response SLA: 14 Days
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Triage | Repro Notification Sent  | Remediation Plan In Progress | 
-
 As soon as the [SecurityWG] decides to fix the Reported vulnerability, the Coordinator should:
 
 - Inform the Reporter and manage their expectations on next steps
 - Transition the Security Advisory state from `Triage` to `Draft`
 
 > [!TIP]
-> If you decide to proactively share your Mitigation/Remediation Plan(s) with the Reporter for feedback, the Runbook separates Reporter comms into two events:
+> If you decide to proactively share your Mitigation/Remediation Plan(s) with the Reporter for feedback, the runbook separates Reporter comms into two events:
 > 
 > - Update 1: Tier 2 Triage Complete + Mitigation/Remediation In Progress
 > - Update 2: Mitigation/Remediation Plan(s) Complete + Feedback Request
@@ -737,13 +585,6 @@ Use the [Tier 2 Triage Complete: Routine Template]. Customize your response if y
 > The Tier 2 Triage Phase is now complete and you transition to the Remediation Developering Phase! Congrats! \ o /
 
 # 12. [FIX] Remediation Developer(s) Gather Information and Validate Tier 2 Triage
-
->#### Fix Decision Response SLA: 90 Days from Initial Reciept
->#### Reporter Update Comms SLA: 14 Days from Last Comms
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Draft | Fix In Progress Notice Sent  | Remediation In Progress | 
 
 During this Step it is the Remediation Developer(s) responsibility to:
 
@@ -782,13 +623,6 @@ If necessary, the Remediation Developer(s) and Coordinators should also update:
 
 # 13. [FIX] Remediation Developer(s) Draft Mitigation/Remediation Plans
 
->#### Fix Decision Response SLA: 90 Days from Initial Reciept
->#### Reporter Update Comms SLA: 14 Days from Last Comms
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Draft | Fix In Progress Notice Sent  | Remediation In Progress | 
-
 During this Step, it is the Remediation Developer(s) responsibility to to draft the complete Mitigation and Remediation Plans.
 
 The Mitigation and Remediation Plans should be explicitly traced from the Mitigation and Remediation Options discussed at the end of Tier 2 Triage.
@@ -815,12 +649,7 @@ The Remediation Reviewer(s) and Fix Approver(s) should be generally aware of and
 
 # 14. [FIX] Coordinator Facilitates Feedback and Consensus on Draft Mitigation/Remediation Plans
 
->#### Fix Decision Response SLA: 90 Days from Initial Reciept
->#### Reporter Update Comms SLA: 14 Days from Last Comms
 
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Draft | Fix In Progress Notice Sent  | Remediation In Progress | 
 
 Once the draft Mitigation and Remediation Plans are complete, the Coordinator should facilitate feedback and consensus on the proposed plan.
 
@@ -832,13 +661,6 @@ While there should be consensus on the entirity of both Plans, special attention
 
 # 15. [FIX] Remediation Developer(s) Tentatively Complete and Verify Remediation with Support from Reviewer(s) and Verifiers(s)
 
->#### Fix Decision Response SLA: 90 Days from Initial Reciept
->#### Reporter Update Comms SLA: 14 Days from Last Comms
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Draft | Fix In Progress Notice Sent  | Remediation Tentatively Complete | 
-
 In this Step, responsibilities are:
 
 - **Remediation Developer:** Follow the Remediation Plan to complete development and Update the Plan as new information is learned during development
@@ -847,19 +669,10 @@ In this Step, responsibilities are:
     - Execute the Test Plan
 - **Remediation Verifier:** Execute the Test Plan
 
-
-
 > [!IMPORTANT]
 > When testing a remediation patch, it's possible the Reporter will identify additional attack vectors they didn't think of when originally performing their research. Before the [SecurityWG] considers a remediation patch complete and ready for release, be sure to ensure that the Reporter agrees that they're unlikely to find workarounds.
 
 # 16. [RELEASE] Coordinator Prepares the Security Advisory for Publication
-
->#### Fix Decision Response SLA: 90 Days from Initial Receipt
->#### Reporter Update Comms SLA: 14 Days from Last Comms
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Draft | Fix In Progress Notice Sent  | Remediation Complete | 
 
 In this Step, the Coordinator, with Remediation Developer support, is responsible for:
 
@@ -967,13 +780,6 @@ While not necessary, it's a good practice to have a CVD ID ready to share with t
 
 # 17. [RELEASE] Coordinator Updates Reporter to Validate Remediation and Coordinate Public Disclosure
 
->#### Fix Decision Response SLA: 90 Days from Initial Receipt
->#### Reporter Update Comms SLA: 14 Days from Last Comms
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Draft | Remediation Ready Sent  | Remediation Tentatively Complete |
-
 In this Step, the Coordinator, with Remediation Developer support, is responsible for:
 
 - 17a: Requesting Reporter feedback on the Security Advisory 
@@ -1014,13 +820,6 @@ This is a sensitive and potentially contentious request and the Reporter may dec
 > If having this response from the Reporter is important, it's recommended to only follow-up with them after three days.
 
 # 18. [RELEASE] Remediation Developer(s) Release the Patch While Coordinator Publishes Security Advisory
-
->#### Fix Decision Response SLA: 90 Days from Initial Receipt
->#### Reporter Update Comms SLA: 14 Days from Last Comms
-
-| Advisory State | Comms State | Vulnerability |
-| -------- | ------| ----------  | 
-| Published | Fix In Progress Notice Sent  | Remediation Complete | 
 
 On the planned disclosure/release date, the Coordinator and Remediation Developer(s) are responsible for:
 
