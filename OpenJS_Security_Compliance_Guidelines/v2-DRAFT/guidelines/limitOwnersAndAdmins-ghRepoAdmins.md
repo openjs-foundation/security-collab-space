@@ -1,0 +1,59 @@
+<span style="font-size:0.8em;"><code>ghRepoAdmins</code></span>  
+# Limit GitHub Repo Admins to Fewer Than Three
+
+**Qualifier:** Multiple Contributors
+
+---
+
+<span style="font-size:1.15em;"><b>Limit Number of Github Repository Admins (ideally Fewer Than Three)</b></span>
+
+<span style="font-size:1.1em;"><b>Why This Matters:</b> Minimizes the attack surface of the GitHub organization.</span>
+
+**Project Expectations**
+
+<div align="center">
+
+| Incubating | Active | Archived |
+|:-----------:|:--------:|:----------:|
+| R | R | R |
+
+</div>
+
+
+
+
+**Sources:**
+- [OpenSSF SCM Best Practices](https://github.com/ossf/scorecard/blob/main/docs/checks.md)
+
+**MITRE:**
+- [CAPEC-180](https://capec.mitre.org/data/definitions/180.html)
+- [M1026](https://attack.mitre.org/mitigations/M1026/)
+
+**OpenPathFinder:** https://openpathfinder.com/docs/checks/limitRepoAdmins/
+
+**Context:** [GitHub](../context-GitHub.md)
+
+
+
+---
+
+<table>
+<tr>
+  <th align="center">Hierarchy 1</th>
+  <th align="center">Hierarchy 2</th>
+</tr>
+<tr>
+  <td>
+    <a href="../User Account Permissions">User Account Permissions</a><br> > 
+    <a href="../limitOwnersAndAdmins">limitOwnersAndAdmins</a>
+  </td>
+  <td>
+    <a href="../accessGovernance">accessGovernance</a><br> >
+    <a href="../limitOwnersAndAdmins">limitOwnersAndAdmins</a>
+  </td>
+</tr>
+</table>
+
+---
+
+*Part of: [OpenJS Security Compliance Guide](../README.md)* 
