@@ -53,6 +53,22 @@ We may not directly solve incidents, but we help **unblock situations** and **su
 
 ### Roles & Responsibilities
 
+
+#### RACI Diagram
+
+_You can find more information about RACI in this [link](https://www.atlassian.com/work-management/project-management/raci-chart)_
+
+
+| Process Step                          | Reporter | Response Team (Foundation) | Coordinator (SRC) | SME |
+|---------------------------------------|----------|-----------------------------|-------------------|-----|
+| File Report                       | R, A     | C                           | I                 |     |
+| Assign Coordinator                | I        | R                           | A                 |     |
+| Assess Impact & Severity          | I        | C                           | A                 | C   |
+| Identify & assign SMEs            | I        | C                           | A                 | C   |
+| Make a resolution / recommend mitigation | I  | C                           | A                 | C   |
+| Document findings                 | I        | C                           | A                 | I, C   |
+| Publish and share (if approved)   | I        | R, A                        | C                 | C   |
+
 - 🍿 @Discussion: who should be in the team? 
 - 🍿 @Discussion: what is the right name for the team ("THE TEAM")? 
 - 🍿 @Discussion: what is the right name for the report ("THE REPORT")? 
