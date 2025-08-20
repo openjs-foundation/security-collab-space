@@ -4,7 +4,7 @@
 This document outlines the process for handling security-impacting incidents affecting one or more projects in the Foundation’s ecosystem. Incidents may include platform changes with security implications, account compromise, or other security events that require coordinated response.
 
 The Foundation’s role is to:  
-1. **Receive and triage reports**  
+1. **Receive and triage THE REPORTS**  
 2. **Connect reporters and affected maintainers with the right experts**  
 3. **Facilitate coordinated response** across multiple projects when needed  
 4. **Communicate clearly and act as the contact point** while respecting confidentiality and responsible disclosure principles  
