@@ -14,7 +14,7 @@ Please use a secure password manager to store, and generate, your secure passwor
 
 ### Preparing for Publish
 
-It can be easy to forget to run steps before publishing. If you have any build steps (transpiling with Babel or TypeScript, emitting types with TypeScript, etc) and/or validation steps (running tests, etc), make sure they're set up in the `scripts` section of `package.json` such that `npm run prepublish` or `npm run prepublishOnly` would invoke them - that way, running `npm publish` in the future will automatically run these steps.
+It can be easy to forget to run steps before publishing. If you have any build steps (transpiling with Babel or TypeScript, emitting types with TypeScript, etc) and/or validation steps (running tests, etc), make sure they're set up in the `scripts` section of `package.json` such that `npm run prepublish` or `npm run prepublishOnly` would invoke them - that way, running `npm publish` in the future will automatically run these steps. You may instead wish to run build steps in `prepack`, so that build output is included with `npm pack` as well (instead of only with `npm publish`).
 
 Publishing to npm can be done in one step (`npm publish`), or two (`npm pack` to generate a tarball, and then later, `npm publish path/to/tarball` to publish). Even if you publish separately with one step, it's a good idea to run `npm pack` in CI to ensure that the steps succeed, and that the tarball is somewhat reproducible. (Example: [this workflow](https://github.com/ljharb/actions/blob/5a85b6e4de8738a6c7a87a45ebc9711f2d9a7226/.github/workflows/pretest.yml#L64-L67), which you can see the latest runs of [here](https://github.com/ljharb/qs/actions/workflows/node-pretest.yml?query=branch%3Amain))
 
