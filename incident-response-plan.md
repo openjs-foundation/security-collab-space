@@ -112,11 +112,10 @@ Experts brought in for technical insight, platform liaison work, or domain-speci
 - Advise on mitigation strategies  
 - Help unblock the situations when feasible
 
-### Reporting methods
+### Reporting method
 
-- 🍿 @Discussion: what is the best option?
-    - Dedicated email alias?  
-    - Secure web form?
+
+In [this webform](https://report-incident.openjsf.org/) is possible to create a new security report
 
 
 ## Runbook
