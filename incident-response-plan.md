@@ -5,7 +5,7 @@ This document outlines the process for handling security incidents affecting any
 
 The Foundation’s role is to:  
 1. **Receive and triage the Incident Reports**  
-2. **Connect reporters and affected maintainers with the right experts**  
+2. **Connect incident reporters with experts who can help**  
 3. **Facilitate coordinated response** across multiple projects when needed  
 4. **Communicate clearly and act as the contact point** while respecting confidentiality and responsible disclosure principles  
 
