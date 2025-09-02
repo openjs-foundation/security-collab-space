@@ -1,7 +1,7 @@
 # Incident Response Plan
 
 ## Purpose  
-This document outlines the process for handling security-impacting incidents affecting one or more projects in the Foundation’s ecosystem. Incidents may include platform changes with security implications, account compromise, or other security events that require coordinated response.
+This document outlines the process for handling security incidents affecting any OpenJS project. Incidents may include platform changes with security implications, account compromise, or other security events that require coordinated response.
 
 The Foundation’s role is to:  
 1. **Receive and triage the Incident Reports**  
