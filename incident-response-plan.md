@@ -4,7 +4,7 @@
 This document outlines the process for handling security-impacting incidents affecting one or more projects in the Foundation’s ecosystem. Incidents may include platform changes with security implications, account compromise, or other security events that require coordinated response.
 
 The Foundation’s role is to:  
-1. **Receive and triage THE REPORTS**  
+1. **Receive and triage the Incident Reports**  
 2. **Connect reporters and affected maintainers with the right experts**  
 3. **Facilitate coordinated response** across multiple projects when needed  
 4. **Communicate clearly and act as the contact point** while respecting confidentiality and responsible disclosure principles  
@@ -70,16 +70,15 @@ _You can find more information about RACI in this [link](https://www.atlassian.c
 | Publish and share (if approved)   | I        | R, A                        | C                 | C   |
 
 - 🍿 @Discussion: who should be in the team? 
-- 🍿 @Discussion: what is the right name for the report ("THE REPORT")? 
 - 🍿 @Discussion: Should we publish the learning/findings when possible publickly to help the community?
 
 #### Reporter
 
-This person submits A REPORT to the Foundation Security Team and provides detailed information about the incident.
+This person submits an Incident Report to the Foundation Security Team and provides detailed information about the incident.
 
 **Responsibilities**
 
-- Submit A REPORT to the Foundation Security Team.
+- Submit an Incident Report to the Foundation Security Team.
 
 **Expectations**
 
@@ -92,16 +91,16 @@ This person submits A REPORT to the Foundation Security Team and provides detail
 
 #### Coordinator (SRC)
 
-This person acts as the focal point for a specific REPORT and ensures the report follows all responsible disclosure guidelines. The SRC coordinates the remediation process if the situation is confirmed and ensures that THE REPORT follows the process and necessary actions are taken. While the SRC is not necessarily responsible for performing a detailed analysis or remediation.
+This person acts as the focal point for a specific Incident Report and ensures the report follows all responsible disclosure guidelines. The SRC coordinates the remediation process if the situation is confirmed and ensures that the Incident Report follows the process and necessary actions are taken. While the SRC is not necessarily responsible for performing a detailed analysis or remediation.
 
 **Responsibilities**
 
-- Acknowledge receipt of REPORTS within the required timeframe.
+- Acknowledge receipt of Incident Reports within the required timeframe.
 - Orchestrate the embargo and identify the minimum set of individuals involved.
 - Remind everyone involved that they must not notify/involve any other individuals. If someone else needs to be involved, that must go through the Coordinator.
 - Assign one or multiple SMEs.
 - Ensure communication with the reporter and the affected projects throughout the process.
-- Track all THE REPORTS for visibility and reporting.
+- Track all the Incident Reports for visibility and reporting.
 
 #### Subject Matter Expert (SME)
 Experts brought in for technical insight, platform liaison work, or domain-specific advice.  
@@ -120,7 +119,7 @@ In [this webform](https://report-incident.openjsf.org/) is possible to create a 
 ## Runbook
 
 - 🍿 @Discussion: What is the best approach? Some ideas:
-    1. **REPORT Received**  
+    1. **Incident Report Received**  
     2. **Assign Coordinator** and consolidate report details  
     3. **Review** severity and affected projects  
     4. **Identify SMEs** and brief them  
@@ -135,7 +134,7 @@ In [this webform](https://report-incident.openjsf.org/) is possible to create a 
 
 ```mermaid
 flowchart TD
-    A[REPORT Received] --> B[Assign Coordinator]
+    A[Incident Report Received] --> B[Assign Coordinator]
     B --> C{Is valid, qualified and can be verified?}
     C -- No --> D[Request Clarification from Reporter]
     D --> C
