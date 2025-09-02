@@ -1,140 +1,118 @@
 # Incident Response Plan
 
-## Purpose  
-This document outlines the process for handling security incidents affecting any OpenJS project. Incidents may include platform changes with security implications, account compromise, or other security events that require coordinated response.
+## Purpose & Role  
 
-The Foundation’s role is to:  
-1. **Receive and triage the Incident Reports**  
-2. **Connect incident reporters with experts who can help**  
-3. **Facilitate coordinated response** across multiple projects when needed  
-4. **Act as the contact point** while respecting confidentiality and responsible disclosure principles
+This plan outlines how the OpenJS Foundation facilitates and coordinates responses to security incidents affecting supported projects.  
 
----
+The Foundation acts as a **facilitator and coordinator**, not as the primary incident responder. Our focus is to unblock projects and reduce risk by:
 
-## Scope  
+- Connecting the right people and resources  
+- Coordinating communication between affected parties  
+- Providing guidance on best practices and mitigation strategies  
+- Facilitating access to subject matter experts  
+- Ensuring incidents follow responsible disclosure timelines  
 
-This plan covers incidents such as:  
-- **Platform changes or provider outages with security implications** (e.g., compromised authentication systems, unexpected data exposure, service disruptions affecting security controls) that create security or operational risk.  
-- **Account or registry access issues** (e.g., npm lockdown, compromised maintainer account).  
-- **Supply chain attacks** (e.g. XZ, phishing campaign, etc.. )  
-- **Legal-related operational threats**, including:
-  - License disputes (e.g., GPL/MIT compliance challenges)
-  - Patent-related threats impacting project distribution
-  - DMCA takedown requests
-  - Trademark misuse or brand impersonation
+**We do not:**  
+- Directly fix code vulnerabilities  
+- Manage individual project security  
+- Serve as the first responder for project-level technical issues  
 
-
-Incidents that are not in scope:
-- **Code-level security vulnerabilities** in projects maintained within the Foundation (handled by the project or the OpenJS CNA Team)
-- **Non-Foundation projects** — see the [list of supported projects](https://openjsf.org/projects)  
+This approach respects project autonomy while leveraging the Foundation’s position in the ecosystem to resolve incidents efficiently.  
 
 ---
 
-### Incident Categories  
+## Scope & Incident Categories  
 
-- 🍿 @Discussion: Probably we can think on more scenarios together 
+This plan applies to incidents such as:  
+- **Platform or provider security issues** (e.g., authentication compromise, unexpected data exposure, outages affecting security controls)  
+- **Account or registry access issues** (e.g., npm lockdown, GitHub MFA lockout, compromised maintainer account)  
+- **Supply chain attacks** (e.g., malicious package versions, phishing campaigns, dependency compromises)  
+- **Legal or operational threats** (e.g., license disputes, patent challenges, DMCA takedowns, trademark misuse)  
 
+**Out of Scope:**  
+- Code-level vulnerabilities in Foundation projects (handled by the project or OpenJS CNA Team)  
+- Non-Foundation projects — see [supported projects list](https://openjsf.org/projects)  
+
+🍿 @Discussion: Probably we can think on more scenarios together  
 
 | Category | Examples | Primary Response Role |
 |----------|----------|-----------------------|
-| **Vulnerability Report** | Code exploit, CVE disputes, escalations... | Redirect to the project or delegate to the CNA Team |
-| **Platform changes or provider outages with security implications** | compromised authentication systems, unexpected data exposure, service disruptions affecting security controls... | Triage → Escalate to platform contacts → Provide mitigations |
-| **Account Access Issue** | npm account lockout, GitHub MFA issues | Triage → Help restore access via platform → Provide temporary mitigation |
-| **Supply Chain Attack** | Malicious dependency version | Coordinate with affected projects → Security advisories |
-| **External Incident Impact** | Cloud provider compromise, service outage | Facilitate communication between impacted maintainers and providers |
+| **Vulnerability Report** | Code exploit, CVE disputes, escalations | Redirect to project / CNA Team |
+| **Platform Security Issue** | Authentication compromise, data exposure, outages | Triage → Escalate to platform → Mitigation guidance |
+| **Account Access Issue** | npm account lockout, GitHub MFA | Triage → Work with provider → Temporary mitigation |
+| **Supply Chain Attack** | Malicious dependency release | Coordinate with affected projects → Security advisories |
+| **External Provider Incident** | Cloud/service compromise | Facilitate communication between maintainers & provider |
 
 ---
 
+## Roles & Responsibilities  
 
-## Action plan  
+### RACI Overview  
 
-We may not directly solve incidents, but we help **unblock situations** and **support projects at risk**.
+[More on RACI](https://www.atlassian.com/work-management/project-management/raci-chart)  
 
-### Roles & Responsibilities
+| Process Step | Reporter | Foundation Response Team | Coordinator (SRC) | SME |
+|--------------|----------|--------------------------|-------------------|-----|
+| File Report | R, A | C | I |  |
+| Assign Coordinator | I | R | A |  |
+| Assess Impact & Severity | I | C | A | C |
+| Identify SMEs | I | C | A | C |
+| Recommend Mitigation | I | C | A | C |
+| Document Findings | I | C | A | I, C |
+| Publish/Share (if approved) | I | R, A | C | C |
 
+🍿 @Discussion: who should be in the team?  
+🍿 @Discussion: Should we publish learnings publicly to help the community?  
 
-#### RACI Diagram
+---
 
-_You can find more information about RACI in this [link](https://www.atlassian.com/work-management/project-management/raci-chart)_
+### Reporter  
+Submits an incident report to the Foundation Security Team.  
 
+**Responsibilities & Expectations**  
+- Provide detailed incident information  
+- Follow responsible disclosure guidelines  
+- Cooperate by supplying clarifications when needed  
+- Respect embargo and disclosure timelines  
 
-| Process Step                          | Reporter | Response Team (Foundation) | Coordinator (SRC) | SME |
-|---------------------------------------|----------|-----------------------------|-------------------|-----|
-| File Report                       | R, A     | C                           | I                 |     |
-| Assign Coordinator                | I        | R                           | A                 |     |
-| Assess Impact & Severity          | I        | C                           | A                 | C   |
-| Identify & assign SMEs            | I        | C                           | A                 | C   |
-| Make a resolution / recommend mitigation | I  | C                           | A                 | C   |
-| Document findings                 | I        | C                           | A                 | I, C   |
-| Publish and share (if approved)   | I        | R, A                        | C                 | C   |
+---
 
-- 🍿 @Discussion: who should be in the team? 
-- 🍿 @Discussion: Should we publish the learning/findings when possible publickly to help the community?
+### Coordinator (SRC)  
+Focal point for each incident. Ensures process is followed and manages communications.  
 
-#### Reporter
+**Responsibilities**  
+- Acknowledge reports promptly  
+- Manage embargo and limit information sharing  
+- Assign SMEs as needed  
+- Keep reporter and affected projects updated  
+- Track all incidents for reporting and visibility  
 
-This person submits an Incident Report to the Foundation Security Team and provides detailed information about the incident.
+---
 
-**Responsibilities**
+### Subject Matter Expert (SME)  
+Provides technical, legal, or domain-specific expertise.  
 
-- Submit an Incident Report to the Foundation Security Team.
+**Responsibilities**  
+- Help assess impact and options  
+- Recommend mitigation strategies  
+- Assist in unblocking projects when feasible  
 
-**Expectations**
+---
 
-- Provide detailed information about the suspected vulnerability.
-- Follow responsible disclosure guidelines (adapted to this context).
-- Cooperate with the Foundation Security Team by providing additional details when needed.
-- Respect security timelines and avoid premature public disclosure.
+## Reporting Method  
 
+Submit incidents through the [OpenJS Security Incident Webform](https://report-incident.openjsf.org/).  
 
+---
 
-#### Coordinator (SRC)
+## Response Workflow  
 
-This person acts as the focal point for a specific Incident Report and ensures the report follows all responsible disclosure guidelines. The SRC coordinates the remediation process if the situation is confirmed and ensures that the Incident Report follows the process and necessary actions are taken. While the SRC is not necessarily responsible for performing a detailed analysis or remediation.
-
-**Responsibilities**
-
-- Acknowledge receipt of Incident Reports within the required timeframe.
-- Orchestrate the embargo and identify the minimum set of individuals involved.
-- Remind everyone involved that they must not notify/involve any other individuals. If someone else needs to be involved, that must go through the Coordinator.
-- Assign one or multiple SMEs.
-- Ensure communication with the reporter and the affected projects throughout the process.
-- Track all the Incident Reports for visibility and reporting.
-
-#### Subject Matter Expert (SME)
-Experts brought in for technical insight, platform liaison work, or domain-specific advice.  
-
-**Responsibilities**:  
-- Provide expert input to help assess impact and options  
-- Advise on mitigation strategies  
-- Help unblock the situations when feasible
-
-### Reporting method
-
-
-In [this webform](https://report-incident.openjsf.org/) is possible to create a new security report
-
-
-## Runbook
-
-- 🍿 @Discussion: What is the best approach? Some ideas:
-    1. **Incident Report Received**  
-    2. **Assign Coordinator** and consolidate report details  
-    3. **Review** severity and affected projects  
-    4. **Identify SMEs** and brief them  
-    5. **Coordinate** with projects, platforms, or third parties  
-    6. **Document** findings and lessons learned  
-    7. **Publish** partial or full summary if appropriate  
-    8. **Social Media Team** prepare and posts where needed 
-
-## General Response Workflow  
-
-- 🍿 @Discussion: early-stage idea, based on the Runbook:
+🍿 @Discussion: early-stage idea, based on the Runbook  
 
 ```mermaid
 flowchart TD
     A[Incident Report Received] --> B[Assign Coordinator]
-    B --> C{Is valid, qualified and can be verified?}
+    B --> C{Valid and verifiable?}
     C -- No --> D[Request Clarification from Reporter]
     D --> C
     C -- Yes --> E[Assess Impact and Severity]
@@ -145,5 +123,15 @@ flowchart TD
     H --> I
     I --> J[Update Reporter and Stakeholders]
     J --> K[Document and Close Incident]
+```
 
+### Runbook (Step Summary)
 
+1. **Incident Report Received**  
+2. **Assign Coordinator** and consolidate details  
+3. **Review Severity** and affected projects  
+4. **Identify SMEs** and brief them  
+5. **Coordinate** with projects, platforms, or third parties  
+6. **Document** findings and lessons learned  
+7. **Publish** summary (if appropriate)  
+8. **Social Media Team** posts updates if needed  
