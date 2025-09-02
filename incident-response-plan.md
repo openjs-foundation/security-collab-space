@@ -38,7 +38,7 @@ Incidents that are not in scope:
 | Category | Examples | Primary Response Role |
 |----------|----------|-----------------------|
 | **Vulnerability Report** | Code exploit, CVE disputes, escalations... | Redirect to the project or delegate to the CNA Team |
-| **Platform Change Risk** | GitHub UI update causing accidental info exposure | Triage → Escalate to platform contacts → Provide mitigations |
+| **Platform changes or provider outages with security implications** | compromised authentication systems, unexpected data exposure, service disruptions affecting security controls... | Triage → Escalate to platform contacts → Provide mitigations |
 | **Account Access Issue** | npm account lockout, GitHub MFA issues | Triage → Help restore access via platform → Provide temporary mitigation |
 | **Supply Chain Attack** | Malicious dependency version | Coordinate with affected projects → Security advisories |
 | **External Incident Impact** | Cloud provider compromise, service outage | Facilitate communication between impacted maintainers and providers |
