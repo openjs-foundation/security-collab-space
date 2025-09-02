@@ -70,23 +70,22 @@ _You can find more information about RACI in this [link](https://www.atlassian.c
 | Publish and share (if approved)   | I        | R, A                        | C                 | C   |
 
 - 🍿 @Discussion: who should be in the team? 
-- 🍿 @Discussion: what is the right name for the team ("THE TEAM")? 
 - 🍿 @Discussion: what is the right name for the report ("THE REPORT")? 
 - 🍿 @Discussion: Should we publish the learning/findings when possible publickly to help the community?
 
 #### Reporter
 
-This person submits A REPORT to THE TEAM and provides detailed information about the incident.
+This person submits A REPORT to the Foundation Security Team and provides detailed information about the incident.
 
 **Responsibilities**
 
-- Submit A REPORT to THE TEAM.
+- Submit A REPORT to the Foundation Security Team.
 
 **Expectations**
 
 - Provide detailed information about the suspected vulnerability.
 - Follow responsible disclosure guidelines (adapted to this context).
-- Cooperate with THE TEAM by providing additional details when needed.
+- Cooperate with the Foundation Security Team by providing additional details when needed.
 - Respect security timelines and avoid premature public disclosure.
 
 
