@@ -17,7 +17,6 @@ This plan covers incidents such as:
 - **Platform changes or provider outages with security implications** (e.g., compromised authentication systems, unexpected data exposure, service disruptions affecting security controls) that create security or operational risk.  
 - **Account or registry access issues** (e.g., npm lockdown, compromised maintainer account).  
 - **Supply chain attacks** (e.g. XZ, phishing campaign, etc.. )  
-- **Third-party service compromises** affecting Foundation projects (e.g., data leaks in external services)  
 - **Legal-related operational threats**, including:
   - License disputes (e.g., GPL/MIT compliance challenges)
   - Patent-related threats impacting project distribution
