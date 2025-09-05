@@ -4,8 +4,8 @@
 
 This checklist is meant to be used in conjunction with:
 
-* [CVD Step-by-Step Runbook Guide for Teams](../CVD-Step-by-Step-Runbook-and-Guide.md)
-* [Researcher Communications Templates](../Researcher-Communications.Primer.md)
+* [CVD Step-by-Step Runbook Guide for Teams](./CVD-Step-by-Step-Runbook-and-Guide.md)
+* [Researcher Communications Templates](./Researcher-Communications.Primer.md)
 
 This checklist uses GitHub's Tasklist feature for when used as a template for a GitHub issue. You can use this template to provide visibility into which Step the Report is currently in and stay aware of the upcoming Steps.
 
