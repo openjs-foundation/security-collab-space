@@ -23,10 +23,10 @@
 
 | Name | OpenJS Slack | GitHub | Role | Time Zone |
 | ----- | ----- | ----- | ----- | :---: |
-| Adam ‘rudd’ Ruddermann | @rudd | @ruddermann | Primary CNA Coordinator | [PT](https://www.timeanddate.com/time/zones/pt) |
-| Chris de Almeida | @Chris de Almeida  | @ctcpip | CNA Coordinator | [ET](https://www.timeanddate.com/time/zones/et) |
-| Ulises Gascon | @ulisesgascon | @ulisesgascon | CNA Coordinator | [CET](https://www.timeanddate.com/time/zones/cet) |
-| Jordan Harband | @ljharb | @ljharb | CNA Coordinator | [PT](https://www.timeanddate.com/time/zones/pt) |
+| Adam ‘rudd’ Ruddermann | @rudd | @ruddermann | Primary CNA Coordinator | [America/Los_Angeles](https://www.timeanddate.com/time/zone/usa/los-angeles) |
+| Chris de Almeida | @Chris de Almeida  | @ctcpip | CNA Coordinator |[America/Chicago](https://www.timeanddate.com/time/zone/usa/chicago) |
+| Ulises Gascon | @ulisesgascon | @ulisesgascon | CNA Coordinator | [Europe/Madrid](https://www.timeanddate.com/time/zone/spain/madrid) |
+| Jordan Harband | @ljharb | @ljharb | CNA Coordinator | [America/Los_Angeles](https://www.timeanddate.com/time/zone/usa/los-angeles) |
 
 # Help responding to a vulnerability report
 
