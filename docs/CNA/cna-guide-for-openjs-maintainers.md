@@ -27,6 +27,7 @@
 | Chris de Almeida | @Chris de Almeida  | @ctcpip | CNA Coordinator |[America/Chicago](https://www.timeanddate.com/time/zone/usa/chicago) |
 | Ulises Gascon | @ulisesgascon | @ulisesgascon | CNA Coordinator | [Europe/Madrid](https://www.timeanddate.com/time/zone/spain/madrid) |
 | Jordan Harband | @ljharb | @ljharb | CNA Coordinator | [America/Los_Angeles](https://www.timeanddate.com/time/zone/usa/los-angeles) |
+| Rafael Gonzaga | @RafaelGSS | @rafaelgss | CNA Coordinator | [America/Sao_Paulo](https://www.timeanddate.com/time/zone/brazil/sao-paulo) |
 
 # Help responding to a vulnerability report
 
