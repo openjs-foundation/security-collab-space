@@ -3,12 +3,8 @@
 ## Reserved CVE ID Handling
 
 ### Reserving CVE IDs
-
-- The CNA should have no less than 2 and no more than 5 reserved, unused CVEs at any one time
-- An issue must be created and approved in [security-advisories](https://github.com/openjs-foundation/security-advisories) before additional CVE IDs may be reserved
-
-### Managing Reserved CVE IDs
-- All reserved CVE IDs are stored in [security-advisories](https://github.com/openjs-foundation/security-advisories)/reserved-cve.md until they are assigned to a CVE Request
+CVE IDs shall be reserved on an as-needed basis when a vulnerability determination has been made and public disclosure is expected. 
+Reserved CVE IDs must be either published within 72 hours of public disclosure or rejected if not used. 
 
 ### Assigning a CVE ID to a CVE Request
 - Comment in the CVE Request issue stating which reserved CVE IDs will be requested to be used
