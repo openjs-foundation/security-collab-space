@@ -48,6 +48,7 @@ Our objectives are to:
 - Matt Rutkowski ([@mrutkows](https://github.com/mrutkows))
 - Joe Sepi ([@joesepi](https://github.com/joesepi))
 - Benjamin Sternthal ([@bensternthal](https://github.com/bensternthal))
+- Wes Todd ([@wesleytodd](https://github.com/wesleytodd))
 
 
 ## Special Thanks
