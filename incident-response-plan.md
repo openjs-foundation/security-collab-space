@@ -101,7 +101,9 @@ Provides technical, legal, or domain-specific expertise.
 
 ## Reporting Method  
 
-Submit incidents through the [OpenJS Security Incident Webform](https://report-incident.openjsf.org/).  
+A direct reporting solution is not yet available. In the meantime, please request support in the #security channel on Slack.
+
+⚠️ Important: The #security channel is public. Do not share sensitive details there. Wait until you are added to a private channel before providing specific information.
 
 ---
 
