@@ -1,0 +1,51 @@
+name: OpenSSF Scorecard Monitor
+
+on: 
+  # TODO: replace by CRON trigger once a deccision is made
+  # Manual trigger
+  workflow_dispatch:
+
+# Permissions required to run this workflow (create issue and commit/push changes)
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  packages: none
+
+jobs:
+  security-scoring:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+
+      - name: OpenSSF Scorecard Monitor
+        uses: UlisesGascon/openssf-scorecard-monitor@8551177324543b39670fe3c430012c946a937bd1 # v2.0.0-beta7
+        with:
+          scope: tools/ossf_scorecard/scope.json
+          database: tools/ossf_scorecard/database.json
+          report: tools/ossf_scorecard/report.md
+          auto-commit: false
+          auto-push: false
+          generate-issue: true
+          issue-title: "OpenSSF Scorecard Report updated!"
+          max-request-in-parallel: 10
+          discovery-enabled: true
+          discovery-orgs: 'ajv-validator,ampproject,appium,architect,dojo,electron,eslint,expressjs,fastify,globalizejs,gruntjs,interledgerjs,jerryscript-project,jestjs,jquery,jshttp,keplergl,lodash,loopbackio,marko-js,messageformat,mochajs,moment,nativescript,node-red,nodejs,nvm-sh,pillarjs,qunitjs,theintern,visgl,webdriverio,webhintio,webpack'
+          report-tags-enabled: true
+          # The token is needed to create issues, discovery mode and pushing changes in files
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        uses: gr2m/create-or-update-pull-request-action@77596e3166f328b24613f7082ab30bf2d93079d5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            commit-message: 'docs: OpenSSF Scorecard Report updated'
+            title: OpenSSF Scorecard Report updated
+            body: 'OpenSSF Scorecard Report updated.'
+            # The person who triggered the workflow will be the assignee
+            assignees: ${{ github.actor }}
+            labels: ossf-scorecard
+            branch: openssf-scorecard-report-updated
+            update-pull-request-title-and-body: true
