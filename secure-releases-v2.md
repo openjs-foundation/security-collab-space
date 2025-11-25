@@ -295,7 +295,7 @@ Granular Access Tokens (GATs) are a credential representing the user who generat
 
 *Safe Storage and Use of Access Tokens*
 
-The npm CLI uses the .npmrc file for configuration. Included in this file is the _AuthToken variable, which npm uses to authenticate to the public registry or a private registry. Npm’s decision to store access tokens in a plain text file is inherently unsafe and additional measures must be taken to properly use and store it.
+The npm CLI uses the .npmrc file for configuration. Included in this file is the _AuthToken variable, which npm uses to authenticate to the public registry or a private registry. npm’s decision to store access tokens in a plain text file is inherently unsafe and additional measures must be taken to properly use and store it.
 
 ```
 ; Public npm registry example  
