@@ -286,7 +286,7 @@ Granular Access Tokens (GATs) are a credential representing the user who generat
 
 * Transfer access tokens using end-to-end encrypted (E2EE) channels like email, Slack, and Teams
 * Copy access tokens or recovery codes into your clipboard (especially on Linux and Windows)
-* Print out access tokens or recovery codes using a that does not belong to you (such as a work printer)
+* Print out access tokens or recovery codes using a printer that does not belong to you (such as a work printer)
 
 **DO**
 
