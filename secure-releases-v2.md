@@ -284,14 +284,14 @@ Granular Access Tokens (GATs) are a credential representing the user who generat
 
 **DO NOT**
 
-* Transfer access tokens using end-to-end encrypted (E2EE) channels like email, Slack, and Teams
+* Transfer access tokens using end-to-end encrypted (non-E2EE)
 * Copy access tokens or recovery codes into your clipboard (especially on Linux and Windows)
 * Print out access tokens or recovery codes using a printer that does not belong to you (such as a work printer)
 
 **DO**
 
-* Transfer access tokens using end-to-end encrypted channels like Signal and WhatsApp
-* Encrypt the file using GPG and then transferring using a non-E2EE method like email or Slack
+* Transfer access tokens using end-to-end encrypted channels
+* Encrypt the file using GPG and then transferring using a non-E2EE method.
 
 *Safe Storage and Use of Access Tokens*
 
@@ -321,7 +321,6 @@ Remember that all members granted Write access to a repository with a GitHub Act
 
 This scenario has many potential approaches. First, use the correct access token for the job:
 
-* GATs should never be stored on a local hard drive (eg: in an .npmrc file)
 * GATs should only be stored in tools that require a MFA check before granting access to the token
 * Legacy Publish Tokens (with 2FA enabled) should be used if the token must be stored in.npmrc
 
@@ -410,7 +409,21 @@ By default, all npm organizations contain a developers team that has special pro
 * Is automatically granted read/write permissions for new packages added to the organization.
 * Cannot be removed from organization packages.
 
-Given these behaviors, it’s recommended to not use the developers team when granting users write access to packages. Instead, set its access to read for each existing package in the organization.
+To ensure the developers team has no package access, follow these steps:
+
+1. For each package in the organization, create a dedicated team for that package.
+2. Add the package to its dedicated team, granting those team members full access.
+3. Remove the package from the developers team.
+4. Repeat for all packages until the developers team has zero packages assigned to it.
+
+This approach ensures that only explicitly designated team members have access to each package, rather than all organization members by default.
+
+**References**
+
+* [npm Docs: Creating teams](https://docs.npmjs.com/creating-teams)
+* [npm Docs: Managing Team access to Organization Packages](https://docs.npmjs.com/managing-team-access-to-organization-packages)
+
+---
 
 **References**
 
