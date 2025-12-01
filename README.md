@@ -24,6 +24,7 @@ Our objectives are to:
 - [Coordinated Vulnerability Disclosure (CVD) Guide](./docs/CVD_Guide/CVD-Step-by-Step-Runbook-and-Guide.md)  
 - [Security Compliance Guidelines](./docs/OpenJS_Security_Compliance_Guidelines/v1/readme.md)  
 - [Secure Releases Guide](./docs/Secure_Releases/secure-releases.md)  
+- [npm Security Best Practices Guide](./docs/npm-security-best-practices.md)  
 - [CNA Guide for OpenJS Maintainers](./docs/CNA/cna-guide-for-openjs-maintainers.md)  
 - [SBOM and Supply Chain Security Challenges](./docs/SBOM/OpenJS-SBOM-CSCRM-Challenges-Recommendations.md)  
 - [Security Best Practices Badge](./docs/Badges/best-practices-badge.md)
