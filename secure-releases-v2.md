@@ -291,7 +291,7 @@ Granular Access Tokens (GATs) are a credential representing the user who generat
 **DO**
 
 * Transfer access tokens using end-to-end encrypted channels
-* Encrypt the file using GPG and then transferring using a non-E2EE method.
+* Encrypt the file using GPG and then transferring using an E2EE method
 
 *Safe Storage and Use of Access Tokens*
 
