@@ -108,5 +108,5 @@ To best help us quickly understand and take action on your submission, be sure t
 
 #### FOR MAINTAINERS: Comments on this Policy
 
-> * If you have suggestions on how this process could be improved please submit a pull request against against the latest version of the policy [in the OpenJS Security Collab Space GitHub](https://github.com/openjs-foundation/security-collab-space/tree/main/CVD_Guide).
+> * If you have suggestions on how this process could be improved please submit a pull request against against the latest version of the policy [in the OpenJS Security Working Group GitHub](https://github.com/openjs-foundation/security-collab-space/tree/main/CVD_Guide).
 > * Don't forget to remove this section!

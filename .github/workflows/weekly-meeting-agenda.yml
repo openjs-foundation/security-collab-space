@@ -1,4 +1,4 @@
-name: Weekly Security Collab Space Meeting Agenda
+name: Weekly Security Working Group Meeting Agenda
 
 on:
   schedule:
@@ -56,7 +56,7 @@ jobs:
           echo "next_meeting_date=$NEXT_MONDAY" >> $GITHUB_OUTPUT
 
           # Create issue title
-          ISSUE_TITLE="Security Collab Space Meeting - $MEETING_DATE"
+          ISSUE_TITLE="Security Working Group Meeting - $MEETING_DATE"
           echo "issue_title=$ISSUE_TITLE" >> $GITHUB_OUTPUT
 
       - name: Check for existing issue
@@ -147,7 +147,7 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.HACKMD_API_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d "{
-              \"title\": \"Security Collab Space Meeting - ${{ steps.meeting-info.outputs.meeting_date }}\",
+              \"title\": \"Security Working Group Meeting - ${{ steps.meeting-info.outputs.meeting_date }}\",
               \"content\": $(echo "$HACKMD_CONTENT" | jq -Rs .),
               \"readPermission\": \"guest\",
               \"writePermission\": \"signed_in\",
@@ -199,7 +199,7 @@ jobs:
 
           # Create issue body following the CPC format
           ISSUE_BODY=$(cat << 'EOF'
-          # Security Collab Space Meeting - ${{ steps.meeting-info.outputs.meeting_date }}
+          # Security Working Group Meeting - ${{ steps.meeting-info.outputs.meeting_date }}
 
           ## Meeting Details
           - **Date**: ${{ steps.meeting-info.outputs.meeting_date }}

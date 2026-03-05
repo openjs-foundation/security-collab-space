@@ -292,7 +292,7 @@ The unfortunate real world impact of this means that connection intended to prov
 
 In its current state, npm’s package provenance functionality does not appear to provide sufficient real world security value to justify the potentially substantial effort required to implement it.
 
-For this reason, the OpenJS Foundation’s Security Collab Space removed all initially proposed provenance related entries from its v1 Security Compliance Guidelines for OpenJS projects. We recommend that OpenJS projects focus their security improvement efforts on higher impact guidelines.
+For this reason, the OpenJS Foundation’s Security Working Group removed all initially proposed provenance related entries from its v1 Security Compliance Guidelines for OpenJS projects. We recommend that OpenJS projects focus their security improvement efforts on higher impact guidelines.
 
 There is much potential in the concept of provenance attestation and we hope engineering continues to improve on the foundation that has been built. To this end, we recommend npm and GitHub implement the following functionality:
 
