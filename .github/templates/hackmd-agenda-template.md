@@ -1,4 +1,4 @@
-# OpenJS Foundation Security Collab Space Meeting - [DATE]
+# OpenJS Foundation Security Working Group Meeting - [DATE]
 
 ## Meeting Details
 - **Date**: [DATE]
@@ -44,6 +44,6 @@
 ---
 
 ## Resources
-- Security Collab Space repository: https://github.com/openjs-foundation/security-collab-space
+- Security Working Group repository: https://github.com/openjs-foundation/security-collab-space
 - OpenJS Security Guidelines: https://github.com/openjs-foundation/security-collab-space/tree/main/docs
 - Join Slack: https://slack-invite.openjsf.org/ (#security channel)

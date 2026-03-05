@@ -5,11 +5,11 @@
   </picture>
 </a>
 
-# OpenJS Security Collaboration Space
+# OpenJS Security Working Group
 
 ## Overview
 
-The Security Collaboration Space is an initiative of the OpenJS Foundation focused on improving security practices across the JavaScript ecosystem.  
+The Security Working Group is an initiative of the OpenJS Foundation focused on improving security practices across the JavaScript ecosystem.  
 This repository serves as a central hub for guidance, shared resources, and working group outputs.
 
 Our objectives are to:
@@ -34,10 +34,10 @@ Our objectives are to:
 
 - Participate in discussions through GitHub issues and PRs.  
 - Join the `#security` channel on the [OpenJS Slack](https://slack-invite.openjsf.org/).  
-- Attend bi-weekly Security Collab Space meetings (see the [OpenJS public calendar](https://calendar.openjsf.org)).  
+- Attend bi-weekly Security Working Group meetings (see the [OpenJS public calendar](https://calendar.openjsf.org)).  
 
 
-## Collaboration Space Members
+## Working Group Members
 
 - Chris de Almeida ([@ctcpip](https://github.com/ctcpip))
 - Darcy Clarke ([@darcyclarke](https://github.com/darcyclarke))

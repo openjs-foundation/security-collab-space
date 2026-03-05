@@ -525,7 +525,7 @@ The [SecurityWG] should also identify the who individuals who will act as:
 ## Extreme Situation Options 
  
  > [!Caution]
- > These are extremely rare and hard to manage situations. If the [SecurityWG] finds itself facing any of these, it should seek help from the OpenJS Security Collab Space so an experienced security practitioner can be available to advise decision making.
+ > These are extremely rare and hard to manage situations. If the [SecurityWG] finds itself facing any of these, it should seek help from the OpenJS Security Working Group so an experienced security practitioner can be available to advise decision making.
 
 ### When to Consider a Short-Term Mitigation 
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This guide was developed by OpenJS Foundation Security Collab Space to provide security best practice insights and recommendations for JavaScript project maintainers using the npm package manager. Also included are brief overviews and examples of the threats npm’s various security features are designed to defend against.
+This guide was developed by OpenJS Foundation Security Working Group to provide security best practice insights and recommendations for JavaScript project maintainers using the npm package manager. Also included are brief overviews and examples of the threats npm’s various security features are designed to defend against.
 
 > [!IMPORTANT]
 > This guide directly inspired by, borrows from, and is intended to ultimately feed updates into the [npm Best Practices Guide v1.1](https://github.com/ossf/package-manager-best-practices/blob/main/published/npm.md) (last updated September 2022) by OSSF's [Best Practices for Open Source Developers](https://github.com/ossf/wg-best-practices-os-developers) Working Group.

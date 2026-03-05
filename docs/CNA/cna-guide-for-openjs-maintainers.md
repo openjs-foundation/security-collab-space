@@ -17,9 +17,9 @@
 | Email | [security@openjsf.org](mailto:security@openjsf.org) |
 | :---- | :---- |
 | OpenJS Slack | \#security in [openjs-foundation.slack.com](https://openjs-foundation.slack.com/) |
-| OpenJS Security Collab Space Weekly Meeting | [8:30am PT most Mondays](https://calendar.openjsf.org) *(except US holidays)* |
+| OpenJS Security Working Group Weekly Meeting | [8:30am PT most Mondays](https://calendar.openjsf.org) *(except US holidays)* |
 
-### OpenJS Security Collab Space CNA Coordinators
+### OpenJS Security Working Group CNA Coordinators
 
 | Name | OpenJS Slack | GitHub | Role | Time Zone |
 | ----- | ----- | ----- | ----- | :---: |
@@ -80,13 +80,13 @@ Despite your project being within the scope of the OpenJS CNA, there is a small 
 
 # Help improving your Vulnerability Disclosure Program
 
-Thanks to Alpha-Omega funding, the OpenJS Security Collab Space can directly support and implement these improvements to your project:
+Thanks to Alpha-Omega funding, the OpenJS Security Working Group can directly support and implement these improvements to your project:
 
 * Improve your create your Vulnerability Disclosure Policy  
 * Transition to a specialized vulnerability disclosure tool (eg: GitHub Private Vulnerability Reporting)  
 * Improve or create internal vulnerability disclosure and management processes
 
-To get started, open an issue in the [Security Collab Space repo](https://github.com/openjs-foundation/security-collab-space) and provide the following information:
+To get started, open an issue in the [Security Working Group repo](https://github.com/openjs-foundation/security-collab-space) and provide the following information:
 
 * What you would like support with  
 * Past successes and challenges you’ve had security researchers  
