@@ -45,12 +45,12 @@ Besides the On Call Role, this runbook uses the roles defined the GitHub Private
 ### Responsibilities: Reporter
 
 * Submits the vulnerability Report
-* Adds othe Finder(s) who discovered the security vulnerability as Collaborators
+* Adds other Finder(s) who discovered the security vulnerability as Collaborators
 * Responds to questions and coordination requests from the Project
 * Validates the remediation patch
 
 >[!NOTE]
->In most cases the Reporter likely to also be the Finder. The role of Reporter is used throughout this runbook.
+>In most cases, the Reporter is likely to also be the Finder. The Reporter role is used throughout this runbook.
 
 ## Introduced in Phase 1: Tier 1 Triage
 
@@ -62,9 +62,9 @@ Besides the On Call Role, this runbook uses the roles defined the GitHub Private
 
 ### Responsibilities: Coordinator
 
-* Assist Triage Analyst w Documentation
+* Assist Triage Analyst with Documentation
 * Gather Feedback, Edit and Send NMI Response
-* Fasciliate Discussions with Team
+* Facilitate Discussions with Team
 * Organize and Track Fix Action Items
 * Informs Reporter of Tier 2 Triage Decision
 * Send Reporter Regular Updates (as appropriate)
@@ -73,7 +73,7 @@ Besides the On Call Role, this runbook uses the roles defined the GitHub Private
 * Propose Updated CWE
 
 >[!NOTE]
->It's possible that the Triage Analyst and Coordinator roles will be performed by the same individual during Tier 1 Triage. In some Projects, the Coordinator role may transition to another person dedicated person during the Tier 2 Triage or Fix Phases.
+>It's possible that the Triage Analyst and Coordinator roles will be performed by the same individual during Tier 1 Triage. In some Projects, the Coordinator role may transition to another dedicated person during the Tier 2 Triage or Fix Phases.
 
 ## Introduced in Phase 2: Tier 2 Triage
 
@@ -94,7 +94,7 @@ Besides the On Call Role, this runbook uses the roles defined the GitHub Private
 * Draft the Technical Portion of the Short-Term Mitigation Plan (as needed)
 * Draft the Technical Mitigation/Remediation Plan(s)
 * Author Code Changes per the Plan(s)
-* Test Repro Steps the Against Patch to Verify Fix Efficacy
+* Test Repro Steps Against the Patch to Verify Fix Efficacy
 * Author Documentation Changes (as needed)
 
 ### Responsibilities: Remediation Reviewer
@@ -135,7 +135,7 @@ This feature cannot be disabled. [Click here](https://docs.github.com/en/code-se
 
 # 2. [T1] On Call Performs Tier 1 Triage and Drafts an Initial Acknowledgement
 
-In this Step, it is the On Call's responsibility to to determine which of the following criteria are relevant to the Report in order to determine the best way to proceed with an Initial Acknowledgement.
+In this Step, it is the On Call's responsibility to determine which of the following criteria are relevant to the Report in order to determine the best way to proceed with an Initial Acknowledgement.
 
 - 2a. Contains any of the Security Escalation Criteria
 - 2b. Is missing data to understand or reproduce the vulnerability
@@ -153,7 +153,7 @@ Remember, it's not necessary during Tier 1 to have a full understanding of the v
 | **Already Publicly Disclosed (0day)** |  The vulnerability has been disclosed publicly regardless of intent, context, or whether it has since been taken down. |
 | **Active Exploitation** | The vulnerability has a functional exploit and there is evidence it has been weaponized by a malicious actor. |
 | **Critical Severity** | Obviously critical or CVSS Score => 9.0. Be sure to validate using the CVSS Calculator and/or phone a friend first.   |
-| **Disclosure Threats** | Threats of uncoordinated public disclosure not within our [VDP] without implied exortion. |
+| **Disclosure Threats** | Threats of uncoordinated public disclosure not within our [VDP] without implied extortion. |
 
 > If the Report passes the Step 2 checks, draft your response using the [Initial Acknowledgement: Security Escalation Template].
 
@@ -161,7 +161,7 @@ Remember, it's not necessary during Tier 1 to have a full understanding of the v
 
 Our [Vulnerability Disclosure Policy] describes what fields and information we need to independently triage and reproduce potential security vulnerabilities.
 
-Be sure to read the entire report for any obviously information that would be needed during later triage. It's ok if you miss something subtle and we have to go back and ask for more information latter. While all information is important, key points to focus on are:
+Be sure to read the entire report for any obvious information that would be needed during later triage. It's ok if you miss something subtle and we have to go back and ask for more information later. While all information is important, key points to focus on are:
 
 - Steps to Reproduce
 - Proposed Impact
@@ -171,7 +171,7 @@ Be sure to read the entire report for any obviously information that would be ne
 
 ## 2c. Not a security vulnerability report?
 
-Our initial acknowledgement should demonstrate that the Report was at least read for comprehension and that a templated response just not just blindly sent to meet a published SLAs. Be sure to check for:
+Our initial acknowledgement should demonstrate that the Report was at least read for comprehension and that a templated response was not just blindly sent to meet a published SLAs. Be sure to check for:
 
 - Spam
 - Feature Requests
@@ -201,7 +201,6 @@ Our initial acknowledgement should demonstrate that the Report was at least read
 | Determine if the Report Needs More Information (NMI) to Triage and Reproduce       | 
 | Send the appropriate initial acknowledgement to the Reporter      | 
 | Summarize the vulnerability and next steps for others on the team      |
-
 
 # 3. [T1] On Call Begins Organizing Internal Discussion by Creating a Tracking Discussion for the Vulnerability
 
@@ -236,8 +235,6 @@ This Step comes before sending the Initial Acknowledgement to the Reporter so th
 > Remember, during Tier 1 Triage it is expected that responses are preliminary and potentially accurate pending further triage. 
 
 # 5. [T1] On Call Sends the Reporter an Initial Acknowledgement of Receipt
-
-
 
 This Initial Acknowledgement is probably the first time you have ever communicated with this Reporter/Security Researcher. The first few days after submitting a vulnerability report to a Bug Bounty or CVD Program are the most uncertain for a security researcher, especially if this is the first time they've submitted a vulnerability to your Program.
 
@@ -313,14 +310,14 @@ During this Step, the Triage Analyst's primary responsibility is to reproduce th
 
 ### Document More Detailed Reproduction Steps
 
-While attempting reproduction, it is common to find omissions and errors in the Reporter's Repro Steps. Using the original Report as a base, the Triage Analyst should - as needed - clean up and more thoroughly document the their environment, tools, and steps that were not captured by the Reporter for use by others on the team.
+While attempting reproduction, it is common to find omissions and errors in the Reporter's Repro Steps. Using the original Report as a base, the Triage Analyst should - as needed - clean up and more thoroughly document their environment, tools, and steps that were not captured by the Reporter for use by others on the team.
 
 #### Success: Two Person Verification
 
 This runbook recommends that once the vulnerability is successfully reproduced by the Triage Analyst, a second team member should validate this using the updated Repro Steps.
 
 > [!IMPORTANT]
-> The Reporter should be notified using the [guidance in Step 8b] as soon as the vulnerability in their Report is repeatedly reproducable. The additional root cause and impact analysis work described below in [Step 9] **should not block** this notification.
+> The Reporter should be notified using the [guidance in Step 8b] as soon as the vulnerability in their Report is repeatedly reproducible. The additional root cause and impact analysis work described below in [Step 9] **should not block** this notification.
 
 ### Unable to Reproduce: Need More Information (NMI)
 
@@ -330,7 +327,7 @@ Despite the inability to reproduce and validate the vulnerability, at this Step 
 
 #### NMI: Two Person Verification
 
-This runbook recommends that if the Triage Analyst is unable to reproduce the vulnerability, another member of the team should make an independent attempt in order to control for environmental factors and natural human error. Te Reporter be notified of this only once two team members have independently failed to reproduce the vulnerability.
+This runbook recommends that if the Triage Analyst is unable to reproduce the vulnerability, another member of the team should make an independent attempt in order to control for environmental factors and natural human error. The Reporter be notified of this only once two team members have independently failed to reproduce the vulnerability.
 
 > [!TIP]
 > Guidance on how to optimize for comms success when requesting more information from the Reporter is discussed in [Step 8a].
@@ -381,17 +378,17 @@ Specific information that should be captured during root cause analysis also inc
 
 ## 9b. Assess and Document Impact and Exploitability
 
-Once the true root cause(s) are known, for each root cause the Triage Analyst should independently assess and document the impact and exploitability of the the actual vulnerability (which may differ from the Report) in **detail** and in a **brief summary**.
+Once the true root cause(s) are known, for each root cause the Triage Analyst should independently assess and document the impact and exploitability of the actual vulnerability (which may differ from the Report) in **detail** and in a **brief summary**.
 
 ### Important Details to Capture
 
-- **Problem:** The flaw/software defect of the root cause..
+- **Problem:** The flaw/software defect of the root cause.
 - **Attack:** What would a real world attack using this vulnerability look like? Be sure to include the target conditions needed for success.
 - **Impact:** When successfully exploited, what are the direct and indirect impacts?
 
 ### Assess the Reporter's Assertions
 
-As part of this, the Triage Analyst should also explicitly identify and any unsupported or erroneous assertions in the original Report in a fact-based, dispassionate tone to to ensure the team and Reporter have a shared understanding of the actual vulnerability.
+As part of this, the Triage Analyst should also explicitly identify and any unsupported or erroneous assertions in the original Report in a fact-based, dispassionate tone to ensure the team and Reporter have a shared understanding of the actual vulnerability.
 
 ### Brief Security Advisory Description
 
@@ -450,9 +447,9 @@ It is not necessary for there to be consensus on the initial, brief Tier 2 Triag
 
 ## 10b. Agree to Completely Remediate the Vulnerability 
 
-In a perfect world all known security vulnerabilities would be completely remediated.
+In a perfect world, all known security vulnerabilities would be completely remediated.
 
-However, in practice there are scenarios where it may not be appropriate or possible to immediately prioritize a code change that completely remediates the reported behavior.
+However, in practice, there are scenarios where it may not be appropriate or possible to immediately prioritize a code change that completely remediates the reported behavior.
 
 This runbook assumes that the [SecurityWG] will choose to completely remediate the vulnerability whenever possible, even if this choice requires negotiating a longer disclosure timeline with the Reporter due to the effort required for remediation.
 

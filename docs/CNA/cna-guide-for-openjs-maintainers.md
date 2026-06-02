@@ -82,14 +82,14 @@ Despite your project being within the scope of the OpenJS CNA, there is a small 
 
 Thanks to Alpha-Omega funding, the OpenJS Security Working Group can directly support and implement these improvements to your project:
 
-* Improve your create your Vulnerability Disclosure Policy  
+* Improve or create your Vulnerability Disclosure Policy  
 * Transition to a specialized vulnerability disclosure tool (eg: GitHub Private Vulnerability Reporting)  
 * Improve or create internal vulnerability disclosure and management processes
 
 To get started, open an issue in the [Security Working Group repo](https://github.com/openjs-foundation/security-collab-space) and provide the following information:
 
 * What you would like support with  
-* Past successes and challenges you’ve had security researchers  
+* Past successes and challenges you’ve had with security researchers  
 * Link(s) to your current or draft policy if you have one  
 * Your preferred timelines for when this work should happen  
 * At least two proposed meeting times to answer questions and discuss next steps

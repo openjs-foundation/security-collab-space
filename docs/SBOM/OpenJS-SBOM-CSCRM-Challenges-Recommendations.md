@@ -28,7 +28,7 @@ The OpenJS Foundation supports the intent of the regulatory regime governments a
 * **SBOMs in the Node.js ecosystem**
     * Should only be generated for end-user facing JavaScript applications and never for individual Javascript libraries that do not provide functionality for end users. This is due to npm’s dependency resolution algorithm, which produces dependency trees for isolated libraries that should not be expected to represent the dependencies of that library when resolved in the context of a JavaScript application. Thus, only JavaScript applications should generate SBOMs.  
 * **npm Package Provenance**
-    * I not recommended for JavaScript libraries and applications as currently implemented as it does not provide the real world security value that many assume it does. We’ve recommended several substantial improvements to npm and GitHub to resolve these gaps so that the sometimes substantial effort needed to implement package provenance can be justified.
+    * Is not recommended for JavaScript libraries and applications as currently implemented as it does not provide the real world security value that many assume it does. We’ve recommended several substantial improvements to npm and GitHub to resolve these gaps so that the sometimes substantial effort needed to implement package provenance can be justified.
 
 Below is a detailed analysis of the relevant features and real world scenarios that explain how we came to these conclusions. We look forward to hearing feedback and engaging with open source advocates, regulators, and GitHub on our recommendations so that we can help make the Internet a safer place.
 
@@ -184,7 +184,7 @@ Unfortunately, this does not appear to be the case. Below is a review of the gap
 
 * Lack of support for MFA prompts in GitHub Actions requires maintainers to use single factor access tokens and stop using credentials that support MFA  
 * Use of GitHub Actions increases the attack surface for package hijacking by:  
-  * Likely increasing the number users able to publish a given package  
+  * Likely increasing the number of users able to publish a given package  
   * Inserting other attack vectors, such as takeover of other GH Actions used during the build process  
 * Requiring manual log analysis to validate that only code in the source repository is included in the published package  
 * Short maximum and configurable log retention limits the timeframe for when this manual log analysis can happen  
@@ -289,7 +289,6 @@ The unfortunate real world impact of this means that connection intended to prov
 
 ## **npm Package Provenance Conclusion and Recommendations**
 
-
 In its current state, npm’s package provenance functionality does not appear to provide sufficient real world security value to justify the potentially substantial effort required to implement it.
 
 For this reason, the OpenJS Foundation’s Security Working Group removed all initially proposed provenance related entries from its v1 Security Compliance Guidelines for OpenJS projects. We recommend that OpenJS projects focus their security improvement efforts on higher impact guidelines.
@@ -319,7 +318,7 @@ It is not possible to publish the  package-lock.json to the npm Registry in its 
 
 * #### **npm-shrinkwrap.json**
 
-This file’s syntax and contents are identical to package-lock.json but it is able to be published to the npm Registry. However, it is rarely used and only published to the npm Registry when the package maintainer wishes to prescriptively enforce their package dependency tree on downstream users. npm-shrinkwrap.json files, though rarely used, are most typically found in freestanding JavaScript application packages rather than library packages.
+This file’s syntax and contents are identical to package-lock.json, but it can be published to the npm Registry. However, it is rarely used and only published to the npm Registry when the package maintainer wishes to prescriptively enforce their package dependency tree on downstream users. npm-shrinkwrap.json files, though rarely used, are most typically found in freestanding JavaScript application packages rather than library packages.
 
 * #### **package.json**
 
@@ -329,7 +328,7 @@ Since the package.json dependency list only contains direct package dependencies
 
 ### **SBOM Tooling for npm**
 
-The npm sbom command generates a SBOM describing the package and its dependencies in either [CycloneDX](https://cyclonedx.org/specification/overview/) or [SPDX](https://spdx.dev/learn/overview/) format. Maintainers have the choice of generating an SBOM based on the observed contents of the node\_modules folder (default) or only based on the contents of the package-lock.json file.
+The `npm sbom` command generates a SBOM describing the package and its dependencies in either [CycloneDX](https://cyclonedx.org/specification/overview/) or [SPDX](https://spdx.dev/learn/overview/) format. Maintainers have the choice of generating an SBOM based on the observed contents of the node\_modules folder (default) or only based on the contents of the package-lock.json file.
 
 [image1]: https://github.com/user-attachments/assets/0ae907d3-b2e5-47ca-a28c-f57605957567
 [image2]: https://github.com/user-attachments/assets/c9bd9d1d-37ed-41de-9a24-585466d1b037
