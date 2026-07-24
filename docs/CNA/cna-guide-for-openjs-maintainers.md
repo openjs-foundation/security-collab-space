@@ -14,7 +14,7 @@
 
 ### How to Contact the CNA
 
-| Email | [security@openjsf.org](mailto:security@openjsf.org) |
+| Email | [security@lists.openjsf.org](mailto:security@lists.openjsf.org) |
 | :---- | :---- |
 | OpenJS Slack | \#security in [openjs-foundation.slack.com](https://openjs-foundation.slack.com/) |
 | OpenJS Security Working Group Weekly Meeting | [8:30am PT most Mondays](https://calendar.openjsf.org) *(except US holidays)* |
